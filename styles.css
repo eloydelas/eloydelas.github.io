@@ -54,9 +54,12 @@ a:hover {
 }
 
 #profile-picture {
+    width: 150px; /* Set the desired width */
+    height: 150px; /* Set the desired height */
     margin-top: 20px;
     border-radius: 50%;
     border: 2px solid #3498db;
+    object-fit: cover; /* Ensures that the image retains its aspect ratio */
 }
 
 .tabs {
@@ -65,17 +68,25 @@ a:hover {
     margin-top: 20px;
 }
 
-.tab-content {
+.tabcontent {
     display: none; /* Hide all tabs content by default */
 }
 
-button {
+.tablinks {
     padding: 10px 20px;
     cursor: pointer;
+    background-color: #f1f1f1; /* Default tab color */
+    border: none; /* Removes button border */
+    font-size: 17px; /* Font size of tab text */
+    transition: 0.3s; /* Smooth transition for hover effect */
 }
 
-button:hover {
-    background-color: #f0f0f0;
+.tablinks:hover {
+    background-color: #f0f0f0; /* Tab color on hover */
+}
+
+.tablinks.active {
+    background-color: #ccc; /* Active tab color */
 }
 
 /* For the default tab to be shown (optional, if any) */

@@ -80,10 +80,15 @@
     </main>
 
 
-    <div class="tabs">
-        <button onclick="showTab('rd-projects')">R&D Projects</button>
-        <button onclick="showTab('publications')">Publications</button>
-    </div>
+
+<div class="tabs">
+    <button class="tablinks" onclick="openTab(event, 'Projects')">R&D Projects</button>
+    <button class="tablinks" onclick="openTab(event, 'Publications')">Publications</button>
+</div>
+
+
+
+<!-- Your projects content goes here -->
 
         <div id="rd-projects" class="tab-content">
             <h2>R&D Projects</h2>
@@ -193,15 +198,33 @@
             </table>
         </div>
 
-        <div id="publications" class="tab-content">
-            <!-- Your Publications content goes here -->
-        </div> 
+
+<!-- Your Publications content goes here -->
+
+        <div id="Publications" class="tabcontent">
+            <h2>Publications</h2>
+            <ol>
+                <li><strong>Martinez-Heras E</strong>, Solana E, Vivó F, , et al. Diffusion-based structural connectivity patterns of multiple sclerosis phenotypes. J Neurol Neurosurg Psychiatry. 2023 Jun 15:jnnp-2023-331531. doi: 10.1136/jnnp-2023-331531. Epub ahead of print. PMID: 37321841.</li>
+             </ol>
+        </div>
+
 
 <script>
-    function showTab(tabId) {
-        let tabs = document.querySelectorAll('.tab-content');
-        tabs.forEach(tab => tab.style.display = 'none');
-        document.getElementById(tabId).style.display = 'block';
+    function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
     }
 </script>
 
