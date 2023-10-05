@@ -47,33 +47,41 @@ a:hover {
 
 /* New and updated styles */
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
 #profile-picture {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    border: 2px solid #3498db;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px; /* Space between tabs */
+    margin-top: 20px;
+}
+
+.tab-content {
+    display: none; /* Hide all tabs content by default */
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+/* For the default tab to be shown (optional, if any) */
+#someTabId {
     display: block;
-    margin: 20px auto 0 auto;
-    border-radius: 50%; 
-    border: 2px solid #3498db; 
-}
-
-table {
-    width: 100%; /* Ensure the table takes the full width */
-    border-collapse: collapse; /* Removes the double borders */
-    margin-top: 20px; /* Space between the section and the table */
-}
-
-th, td {
-    padding: 10px; /* Space inside each cell */
-    border: 1px solid #dcdcdc; /* Light border around each cell for clarity */
-    text-align: left; /* Aligns text to the left */
-}
-
-th {
-    background-color: #f0f0f0; /* Slightly gray background for headers */
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #f9f9f9; /* Slight shading for alternate rows to increase readability */
-}
-
-tbody tr:hover {
-    background-color: #e0e0e0; /* Highlights a row slightly when hovered upon */
 }

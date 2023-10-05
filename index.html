@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eloy Martínez de las Heras - Curriculum Vitae</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Curriculum Vitae</title>
 </head>
 <body>
-    <body>
     
-    
-    <header>
-        <h1>Curriculum Vitae</h1>
-        <img id="profile-picture" src="eloy_picture.jpg" alt="Eloy Martínez de las Heras" width="200">
-    </header>
+  
+<div class="container">
+    <img id="profile-picture" src="path_to_your_image.jpg" alt="Profile Picture">
+    <h1>Curriculum Vitae</h1>
 
     <main>
         <section id="personal-data">
@@ -79,9 +77,19 @@
             <h2>Short Summary of the CV</h2>
             I am Eloy Martínez de las Heras, a postdoctoral researcher in biomedical engineering. For over a decade, I have worked with the Neuroimmunological Diseases group at the Hospital Clinic of Barcelona, specifically with ImaginEM, led by Dr. Sara Llufriu. My expertise lies in MRI data processing, and I have actively contributed to the creation and validation of innovative algorithms in this field. Some examples of these methods include whole-brain parcellation techniques, atrophy measurements of the brain and spinal cord, brain network analysis, and lesion characterization. Throughout my career, I have participated in the publication of more than 40 original articles in prominent clinical and technical journals. These works cover a range of MR techniques, including diffusion-weighted imaging, spectroscopy, spinal cord imaging, and synthetic MRI. Of these articles, I have written eight as the primary author. Currently, I am responsible for implementing an automated processing workflow within the Extensible Neuroimaging Archive Toolkit (XNAT) platform. This workflow allows for the extraction of advanced quantitative MRI measures to aid in disease diagnosis, treatment response, and follow-up.
         </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Eloy Martínez de las Heras. All rights reserved.</p>
+    </footer>
 
 
-        <section id="rd-projects">
+    <div class="tabs">
+        <button onclick="showTab('rd-projects')">R&D Projects</button>
+        <button onclick="showTab('publications')">Publications</button>
+    </div>
+
+        <div id="rd-projects" class="tab-content">
             <h2>R&D Projects</h2>
 
             <table>
@@ -187,12 +195,19 @@
                     </tr>
                 </tbody>
             </table>
-        </section>   
+        </div>
 
-    </main>
+        <div id="publications" class="tab-content">
+            <!-- Your Publications content goes here -->
+        </div> 
 
-    <footer>
-        <p>&copy; 2023 Eloy Martínez de las Heras. All rights reserved.</p>
-    </footer>
+<script>
+    function showTab(tabId) {
+        let tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.style.display = 'none');
+        document.getElementById(tabId).style.display = 'block';
+    }
+</script>
+
 </body>
 </html>
