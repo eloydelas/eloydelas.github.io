@@ -1,84 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Eloy Martínez de las Heras</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Curriculum Vitae</title>
 </head>
+
 <body>
-    
-  
-<div class="container">
-    <h1>Curriculum Vitae</h1>
-    <img id="profile-picture" src="eloy_picture.jpg" alt="Profile Picture">
+    <div class="container">
+        <header>
+            <h1>Curriculum Vitae</h1>
+            <img id="profile-picture" src="eloy_picture.jpg" alt="Profile Picture" width="150">
+        </header>
 
-    <main>
-        <section id="personal-data">
-            <h2>Personal Data</h2>
-            <p><strong>Name:</strong> Eloy Martínez de las Heras</p>
-            <p><strong>Birthdate:</strong> May/31/1982</p>
-            <address>
-                <p><strong>Professional Address:</strong> Neuroimmunology and Multiple Sclerosis Unit, Clinical and experimental neuroscience area. Advanced Imaging in Neuroimmunological Diseases (ImaginEM). Institut d’Investigacions Biomèdiques August Pi I Sunyer (IDIBAPS) – Hospital Clinic of Barcelona (HCB).  Phone: 0034 932275414; Fax: 0034 932275783. 170 Villarroel St. Zip 08036. Barcelona. Spain.</p>
-            </address>
-            <p><strong>Email:</strong> <a href="mailto:EMARTIND@recerca.clinic.cat">EMARTIND@recerca.clinic.cat</a></p>
-            <p><strong>Identifiers:</strong> <a href="https://www.clinicbarcelona.org/profesionales/eloy-martinez-heras">Clinic Barcelona</a> | <a href="https://orcid.org/0000-0001-9937-3162">ORCID</a> | <a href="https://www.researchgate.net/profile/Eloy-Martinez-Heras">ResearchGate</a></p>
-        </section>
+        <main>
+            <section id="personal-data">
+                <h2>Personal Data</h2>
+                <dl>
+                    <dt>Name:</dt>
+                    <dd>Eloy Martínez de las Heras</dd>
 
-        <section id="education">
-            <h2>University Education</h2>
-            <ul>
-            <li>
-                <strong>Chemical Engineering</strong>. Universitat Rovira I Virgili, Tarragona (Spain), July 2007
-            </li>
-            <li>
-                <strong>Master’s in Biomedical Engineering</strong>. University of Barcelona & Polytechnic University of Catalonia (Spain). 2007-2009. 120 European Credit Transfer System (ECTS).<br>
-                Development and calibration of the portable gamma camera in SPECT imaging with parallel collimator.
-            </li>
-            <li>
-                <strong>PhD in Medicine and Translational research</strong>. University of Barcelona, Barcelona (Spain). 2014-2017.<br>
-                Title: Development of an improved framework for tractography reconstruction of white matter fibers based on diffusion-weighted magnetic resonance imaging and its implementation in the study of structural connectivity in patients with multiple sclerosis.<br>
-                Supervisors: Sara Llufriu Duran and Alberto Prats Galino. CUM LAUDE.
-            </li>
-            <li>
-                <strong>Postgraduate in Data Science and Big data</strong>. University of Barcelona, Barcelona (Spain). July 2021.
-            </li>
-            </ul>
-        </section>
+                    <dt>Birthdate:</dt>
+                    <dd>May/31/1982</dd>
 
+                    <dt>Professional Address:</dt>
+                    <dd>Neuroimmunology and Multiple Sclerosis Unit, Clinical and experimental neuroscience area. Advanced Imaging in Neuroimmunological Diseases (ImaginEM). Institut d’Investigacions Biomèdiques August Pi I Sunyer (IDIBAPS) – Hospital Clinic of Barcelona (HCB). Phone: 0034 932275414; Fax: 0034 932275783. 170 Villarroel St. Zip 08036. Barcelona. Spain.</dd>
 
-        <section id="work-experience">
-            <h2>Work Experience</h2>
-            <ul>
-            <li>
-                <strong>02/2018 – present:</strong> Collaborator | Course instructor. Master in data science-Universitat Oberta de Catalunya (UOC).
-            </li>
-            <li>
-                <strong>07/2017 – present:</strong> Postdoctoral researcher (R2A) in Medical Imaging Processing of the Advanced Imaging in Neuroimmunological Diseases research group at Hospital Clinic Barcelona and IDIBAPS (Supervisor: Sara Llufriu Duran).
-            </li>
-            <li>
-                <strong>07/2010-06/2017:</strong> Predoctoral researcher and Neuroimaging engineer. Neuroimmunology-Multiple Sclerosis Unit. Hospital Clinic of Barcelona, Spain.
-            </li>
-            <li>
-                <strong>07/2009-07/2010:</strong> Research fellowships on neuroimage analysis. Fetal and Perinatal research group. Fundació Clínic Barcelona, Spain.
-            </li>
-            </ul>
-        </section>
+                    <dt>Email:</dt>
+                    <dd><a href="mailto:EMARTIND@recerca.clinic.cat">EMARTIND@recerca.clinic.cat</a></dd>
 
-        <section id="quality-indicators">
-            <h2>General Quality Indicators of Scientific Production</h2>
-            <p><strong>Total Publications (Pubmed):</strong> 42</p>
-            <p><strong>Total Citations (WoS Core):</strong> 1431</p>
-            <p><strong>h-index (WoS Core):</strong> 17</p>
-        </section>
+                    <dt>Identifiers:</dt>
+                    <dd><a href="https://www.clinicbarcelona.org/profesionales/eloy-martinez-heras">Clinic Barcelona</a> | <a href="https://orcid.org/0000-0001-9937-3162">ORCID</a> | <a href="https://www.researchgate.net/profile/Eloy-Martinez-Heras">ResearchGate</a></dd>
+                </dl>
+            </section>
 
+            <section id="education">
+                <h2>University Education</h2>
+                <ul>
+                    <!-- I've split up some of the information to make it more readable -->
+                    <li><strong>Chemical Engineering</strong> - Universitat Rovira I Virgili, Tarragona (Spain), July 2007</li>
+                    <li><strong>Master’s in Biomedical Engineering</strong> - University of Barcelona & Polytechnic University of Catalonia (Spain). 2007-2009. 120 ECTS.<br>Topic: Development and calibration of the portable gamma camera in SPECT imaging with parallel collimator.</li>
+                    <li><strong>PhD in Medicine and Translational research</strong> - University of Barcelona, Barcelona (Spain). 2014-2017.<br>Title: Development of an improved framework for tractography reconstruction of white matter fibers based on diffusion-weighted magnetic resonance imaging and its implementation in the study of structural connectivity in patients with multiple sclerosis.<br>Supervisors: Sara Llufriu Duran and Alberto Prats Galino. CUM LAUDE.</li>
+                    <li><strong>Postgraduate in Data Science and Big data</strong> - University of Barcelona, Barcelona (Spain). July 2021.</li>
+                </ul>
+            </section>
 
-        <section id="summary">
-            <h2>Short Summary of the CV</h2>
-            I am Eloy Martínez de las Heras, a postdoctoral researcher in biomedical engineering. For over a decade, I have worked with the Neuroimmunological Diseases group at the Hospital Clinic of Barcelona, specifically with ImaginEM, led by Dr. Sara Llufriu. My expertise lies in MRI data processing, and I have actively contributed to the creation and validation of innovative algorithms in this field. Some examples of these methods include whole-brain parcellation techniques, atrophy measurements of the brain and spinal cord, brain network analysis, and lesion characterization. Throughout my career, I have participated in the publication of more than 40 original articles in prominent clinical and technical journals. These works cover a range of MR techniques, including diffusion-weighted imaging, spectroscopy, spinal cord imaging, and synthetic MRI. Of these articles, I have written eight as the primary author. Currently, I am responsible for implementing an automated processing workflow within the Extensible Neuroimaging Archive Toolkit (XNAT) platform. This workflow allows for the extraction of advanced quantitative MRI measures to aid in disease diagnosis, treatment response, and follow-up.
-        </section>
-    </main>
+            <section id="work-experience">
+                <h2>Work Experience</h2>
+                <ul>
+                    <li><strong>02/2018 – present:</strong> Collaborator & Course instructor at Master in data science, Universitat Oberta de Catalunya (UOC).</li>
+                    <li><strong>07/2017 – present:</strong> Postdoctoral researcher (R2A) in Medical Imaging Processing of the Advanced Imaging in Neuroimmunological Diseases research group at Hospital Clinic Barcelona and IDIBAPS. Supervisor: Sara Llufriu Duran.</li>
+                    <li><strong>07/2010-06/2017:</strong> Predoctoral researcher & Neuroimaging engineer at Neuroimmunology-Multiple Sclerosis Unit, Hospital Clinic of Barcelona, Spain.</li>
+                    <li><strong>07/2009-07/2010:</strong> Research fellow in neuroimage analysis at Fetal and Perinatal research group, Fundació Clínic Barcelona, Spain.</li>
+                </ul>
+            </section>
 
+            <section id="quality-indicators">
+                <h2>General Quality Indicators of Scientific Production</h2>
+                <dl>
+                    <dt>Total Publications (Pubmed):</dt>
+                    <dd>42</dd>
+                    <dt>Total Citations (WoS Core):</dt>
+                    <dd>1431</dd>
+                    <dt>h-index (WoS Core):</dt>
+                    <dd>17</dd>
+                </dl>
+            </section>
+
+            <section id="summary">
+                <h2>Short Summary of the CV</h2>
+                <p>I am Eloy Martínez de las Heras, a postdoctoral researcher in biomedical engineering. For over a decade, I have worked with the Neuroimmunological Diseases group at the Hospital Clinic of Barcelona, specifically with ImaginEM, led by Dr. Sara Llufriu. My expertise lies in MRI data processing, and I have actively contributed to the creation and validation of innovative algorithms in this field. Some examples of these methods include whole-brain parcellation techniques, atrophy measurements of the brain and spinal cord, brain network analysis, and lesion characterization. Throughout my career, I have participated in the publication of more than 40 original articles in prominent clinical and technical journals. These works cover a range of MR techniques, including diffusion-weighted imaging, spectroscopy, spinal cord imaging, and synthetic MRI. Of these articles, I have written eight as the primary author. Currently, I am responsible for implementing an automated processing workflow within the Extensible Neuroimaging Archive Toolkit (XNAT) platform. This workflow allows for the extraction of advanced quantitative MRI measures to aid in disease diagnosis, treatment response, and follow-up.</p>
+            </section>
+        </main>
+    </div>
 
 
 <div class="tabs">
