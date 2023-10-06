@@ -183,3 +183,57 @@ td.right {
 #Workshops h2 {
     margin-bottom: 20px;
 }
+
+/* New Table Styling2... */
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tablinks {
+    background-color: #eee;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+.tablinks:hover {
+    background-color: #ddd;
+}
+
+.tablinks.active {
+    background-color: #666;
+    color: white;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    background-color: #f7f7f7;
+    margin-top: 10px;
+}
+
+#Workshops h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #666;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#Workshops ol {
+    padding-left: 30px;
+}
+
+#Workshops ol li {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
