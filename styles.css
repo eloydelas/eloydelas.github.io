@@ -1,239 +1,102 @@
-/* New Body Styling... */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+/* GLOBAL STYLES */
+body { 
+    font-family: 'Roboto', sans-serif; 
+    color: #333; 
+    background-color: #f8f9fa; 
+    line-height: 1.6; 
 }
 
-.container {
-    max-width: 900px;
-    background-color: #ffffff;
-    margin: 3% auto;
-    padding: 2% 4%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* HERO SECTION (Top Blue Area) */
+.hero-section { 
+    background: linear-gradient(135deg, #003366, #0056b3); 
+    color: white; 
+    padding: 80px 0; 
 }
 
-header {
-    text-align: center;
-    margin-bottom: 3%;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 2%;
+.profile-img { 
+    width: 180px; 
+    height: 180px; 
+    object-fit: cover; 
+    border: 5px solid rgba(255,255,255,0.3); 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
 }
 
-#profile-picture {
+/* GENERAL SECTIONS */
+section { 
+    padding: 60px 0; 
+}
+
+.section-title { 
+    border-left: 5px solid #0056b3; 
+    padding-left: 15px; 
+    margin-bottom: 40px; 
+    color: #003366; 
+    font-weight: 700; 
+}
+
+.bg-white-section { 
+    background-color: #ffffff; 
+    border-top: 1px solid #eee; 
+    border-bottom: 1px solid #eee; 
+}
+
+/* CARDS (Projects & Skills) */
+.card { 
+    border: none; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+    transition: transform 0.2s; 
+    height: 100%; 
+}
+
+.card:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+}
+
+.badge-custom { 
+    background-color: #e3f2fd; 
+    color: #0056b3; 
+    font-weight: 500; 
+    margin-right: 5px; 
+    padding: 8px 12px; 
+}
+
+/* TIMELINE (Experience Section) */
+.timeline-item {
+    border-left: 2px solid #e9ecef;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #0056b3;
     border-radius: 50%;
-    width: 150px; /* You can adjust as per your requirement */
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 20px;
+    position: absolute;
+    left: -7px;
+    top: 5px;
 }
 
-h1, h2 {
-    color: #333;
-    margin-top: 0;
+/* PUBLICATIONS LIST */
+.publication-item { 
+    background: white; 
+    border-left: 4px solid #0056b3; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 0 8px 8px 0; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-h1 {
-    font-size: 2.2em;
-    margin-bottom: 5px;
+/* NAVIGATION BAR */
+.nav-link { 
+    color: #555; 
+    font-weight: 500; 
 }
 
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-}
-
-main > section {
-    margin-bottom: 4%;
-}
-
-dl, ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-dl dt {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-dl dd, ul li {
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-a {
-    color: #007BFF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-
-/* New Tablelinks Styling... */
-
-.tablinks {
-    background-color: #f1f1f1;
-    border: none;
-    padding: 15px 25px;  /* Increase padding to make buttons larger */
-    font-size: 18px;  /* Increase font-size */
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 5px;  /* Add margin to give some spacing between buttons */
-    display: inline-block;  /* To make the buttons align in a row */
-}
-
-.tablinks:hover {
-    background-color: #ddd;
-}
-
-.tablinks.active {
-    background-color: #ccc;
-}
-
-/* New Table Styling... */
-
-table {
-    width: 100%; /* Ensure the table takes the full width */
-    border-collapse: collapse; /* Removes the double borders */
-    margin-top: 20px; /* Space between the section and the table */
-}
-
-th, td {
-    padding: 10px; /* Space inside each cell */
-    border: 1px solid #dcdcdc; /* Light border around each cell for clarity */
-    text-align: left; /* Aligns text to the left */
-}
-
-th {
-    background-color: #f0f0f0; /* Slightly gray background for headers */
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #f9f9f9; /* Slight shading for alternate rows to increase readability */
-}
-
-tbody tr:hover {
-    background-color: #e0e0e0; /* Highlights a row slightly when hovered upon */
-}
-
-td.center {
-    text-align: center;
-}
-
-td.right {
-    text-align: right;
-}
-
-/* Publications Styling */
-
-.publications {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.publication {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    transition: background-color 0.3s;
-}
-
-.publication:hover {
-    background-color: #fafafa;
-}
-
-.publication-title {
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 8px;
-    font-size: 18px;
-}
-
-.publication-authors {
-    color: #7f8c8d;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.publication-journal {
-    font-style: italic;
-    font-size: 16px;
-    color: #34495e;
-    margin-bottom: 5px;
-}
-
-.publication-doi {
-    font-size: 14px;
-    color: #3498db;
-}
-
-.publication-doi a:hover {
-    text-decoration: underline;
-}
-
-/* End of Publications Styling */
-
-#Workshops h2 {
-    margin-bottom: 20px;
-}
-
-/* New Table Styling2... */
-
-.tabs {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.tablinks {
-    background-color: #eee;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    transition: 0.3s;
-    font-size: 16px;
-    margin: 0 5px;
-}
-
-.tablinks:hover {
-    background-color: #ddd;
-}
-
-.tablinks.active {
-    background-color: #666;
-    color: white;
-}
-
-.tabcontent {
-    display: none;
-    padding: 20px;
-    border-top: 1px solid #ccc;
-    background-color: #f7f7f7;
-    margin-top: 10px;
-}
-
-#Workshops h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #666;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-#Workshops ol {
-    padding-left: 30px;
-}
-
-#Workshops ol li {
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 1.5;
+.nav-link.active { 
+    color: #0056b3 !important; 
+    font-weight: 700; 
 }
