@@ -1,977 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Eloy Martínez-Heras</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Eloy Martínez de las Heras - Postdoctoral Researcher in Computational Neuroimaging & Data Science">
+    <meta name="author" content="Eloy Martínez de las Heras">
+    <title>Eloy Martínez de las Heras | Curriculum Vitae</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            color: #333; 
+            background-color: #f8f9fa; 
+            line-height: 1.6; 
+        }
+        
+        /* HERO SECTION */
+        .hero-section { 
+            background: linear-gradient(135deg, #003366, #0056b3); 
+            color: white; 
+            padding: 80px 0; 
+        }
+        .profile-img { 
+            width: 180px; 
+            height: 180px; 
+            object-fit: cover; 
+            border: 5px solid rgba(255,255,255,0.3); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+        }
+        
+        /* SECTIONS */
+        section { padding: 60px 0; }
+        .section-title { 
+            border-left: 5px solid #0056b3; 
+            padding-left: 15px; 
+            margin-bottom: 40px; 
+            color: #003366; 
+            font-weight: 700; 
+        }
+        .bg-white-section { background-color: #ffffff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        
+        /* TIMELINE & CARDS */
+        .timeline-item {
+            border-left: 2px solid #e9ecef;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: #0056b3;
+            border-radius: 50%;
+            position: absolute;
+            left: -7px;
+            top: 5px;
+        }
+        .card { border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .badge-custom { background-color: #e3f2fd; color: #0056b3; padding: 8px 12px; }
+
+        /* PUBLICATIONS */
+        .publication-item { 
+            background: white; 
+            border-left: 4px solid #0056b3; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* TABLE STYLING */
+        .table-hover tbody tr:hover {
+            background-color: rgba(0, 86, 179, 0.05);
+        }
+        .table th {
+            background-color: #f1f1f1;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        .table td {
+            font-size: 0.95rem;
+            vertical-align: middle;
+        }
+
+        /* WORKSHOPS LIST */
+        .workshop-list .list-group-item {
+            border: none;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .workshop-list .list-group-item:last-child {
+            border-bottom: none;
+        }
+        .workshop-date {
+            color: #0056b3;
+            font-weight: bold;
+            min-width: 150px;
+            display: inline-block;
+        }
+
+        /* NAV */
+        .nav-link.active { color: #0056b3 !important; font-weight: 700; }
+    </style>
 </head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" tabindex="0">
 
-<body>
-    <div class="container">
-        <header>
-            <h1>Curriculum Vitae</h1>
-            <img id="profile-picture" src="eloy_picture.jpg" alt="Profile Picture" width="150">
-        </header>
-
-        <main>
-            <section id="personal-data">
-                <h2>Personal Data</h2>
-                <dl>
-                    <dt>Name:</dt>
-                    <dd>Eloy Martínez-Heras</dd>
-
-                    <dt>Birthdate:</dt>
-                    <dd>May/31/1982</dd>
-
-                    <dt>Professional Address:</dt>
-                    <dd>Neuroimmunology and Multiple Sclerosis Unit, Clinical and experimental neuroscience area. Advanced Imaging in Neuroimmunological Diseases (ImaginEM). Institut d’Investigacions Biomèdiques August Pi I Sunyer (IDIBAPS) – Hospital Clinic of Barcelona (HCB). Phone: 0034 932275414; Fax: 0034 932275783. 170 Villarroel St. Zip 08036. Barcelona. Spain.</dd>
-
-                    <dt>Email:</dt>
-                    <dd><a href="mailto:EMARTIND@recerca.clinic.cat">EMARTIND@recerca.clinic.cat</a></dd>
-
-                    <dt>Identifiers:</dt>
-                    <dd><a href="https://www.clinicbarcelona.org/profesionales/eloy-martinez-heras">Clinic Barcelona</a> | <a href="https://orcid.org/0000-0001-9937-3162">ORCID</a> | <a href="https://www.researchgate.net/profile/Eloy-Martinez-Heras">ResearchGate</a></dd>
-                </dl>
-            </section>
-
-            <section id="education">
-                <h2>University Education</h2>
-                <ul>
-                    <!-- I've split up some of the information to make it more readable -->
-                    <li><strong>Chemical Engineering</strong> - Universitat Rovira I Virgili, Tarragona (Spain), July 2007</li>
-                    <li><strong>Master’s in Biomedical Engineering</strong> - University of Barcelona & Polytechnic University of Catalonia (Spain). 2007-2009. 120 ECTS.<br>Topic: Development and calibration of the portable gamma camera in SPECT imaging with parallel collimator.</li>
-                    <li><strong>PhD in Medicine and Translational research</strong> - University of Barcelona, Barcelona (Spain). 2014-2017.<br>Title: Development of an improved framework for tractography reconstruction of white matter fibers based on diffusion-weighted magnetic resonance imaging and its implementation in the study of structural connectivity in patients with multiple sclerosis.<br>Supervisors: Sara Llufriu Duran and Alberto Prats Galino. CUM LAUDE.</li>
-                    <li><strong>Postgraduate in Data Science and Big data</strong> - University of Barcelona, Barcelona (Spain). July 2021.</li>
+    <!-- Navigation -->
+    <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">Eloy Martínez</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#workshops">Workshops</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
                 </ul>
-            </section>
-
-            <section id="work-experience">
-                <h2>Work Experience</h2>
-                <ul>
-                    <li><strong>02/2018 – present:</strong> Collaborator & Course instructor at Master in data science, Universitat Oberta de Catalunya (UOC).</li>
-                    <li><strong>07/2017 – present:</strong> Postdoctoral researcher (R2A) in Medical Imaging Processing of the Advanced Imaging in Neuroimmunological Diseases research group at Hospital Clinic Barcelona and IDIBAPS. Supervisor: Sara Llufriu Duran.</li>
-                    <li><strong>07/2010-06/2017:</strong> Predoctoral researcher & Neuroimaging engineer at Neuroimmunology-Multiple Sclerosis Unit, Hospital Clinic of Barcelona, Spain.</li>
-                    <li><strong>07/2009-07/2010:</strong> Research fellow in neuroimage analysis at Fetal and Perinatal research group, Fundació Clínic Barcelona, Spain.</li>
-                </ul>
-            </section>
-
-            <section id="quality-indicators">
-                <h2>General Quality Indicators of Scientific Production</h2>
-                <dl>
-                    <dt>Total Publications (Pubmed):</dt>
-                    <dd>52</dd>
-                    <dt>Total Citations (WoS Core):</dt>
-                    <dd>1615</dd>
-                    <dt>h-index (WoS Core):</dt>
-                    <dd>20</dd>
-                </dl>
-            </section>
-
-            <section id="summary">
-                <h2>Short Summary of the CV</h2>
-                <p>I am Eloy Martínez de las Heras, a postdoctoral researcher in biomedical engineering. For over a decade, I have worked with the Neuroimmunological Diseases group at the Hospital Clinic of Barcelona, specifically with ImaginEM, led by Dr. Sara Llufriu. My expertise lies in MRI data processing, and I have actively contributed to the creation and validation of innovative algorithms in this field. Some examples of these methods include whole-brain parcellation techniques, atrophy measurements of the brain and spinal cord, brain network analysis, and lesion characterization. Throughout my career, I have participated in the publication of more than 50 original articles in prominent clinical and technical journals. These works cover a range of MR techniques, including diffusion-weighted imaging, spectroscopy, spinal cord imaging, and synthetic MRI. Of these articles, I have written eight as the primary author. Currently, I am responsible for implementing an automated processing workflow within the Extensible Neuroimaging Archive Toolkit (XNAT) platform. This workflow allows for the extraction of advanced quantitative MRI measures to aid in disease diagnosis, treatment response, and follow-up.</p>
-            </section>
-        </main>
-    </div>
-
-
-<div class="tabs">
-    <button class="tablinks" onclick="openTab(event, 'Publications')">Publications</button>
-    <button class="tablinks" onclick="openTab(event, 'Projects')">R&D Projects</button>
-    <button class="tablinks" onclick="openTab(event, 'Workshops')">Workshops & Educational series</button>
-</div>
-
-
-<!-- Your Publications content goes here -->
-
-<div id="Publications" class="tabcontent">
-
-    <div class="publication">
-        <div class="publication-title">
-            Artificial Intelligence and Multiple Sclerosis.
-        </div>
-        <div class="publication-authors">
-            Amin M, <strong>Martínez-Heras E</strong>, Ontaneda D, Prados Carrasco F. <strong>(2/4)</strong>.
-        </div>
-        <div class="publication-journal">
-            Curr Neurol Neurosci Rep. 2024 Aug;24(8):233-243.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1007/s11910-024-01354-x" target="_blank">https://doi.org/10.1007/s11910-024-01354-x</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Microscopic fractional anisotropy outperforms multiple sclerosis lesion assessment and clinical outcome associations over standard fractional anisotropy tensor.
-        </div>
-        <div class="publication-authors">
-            Vivó F, Solana E, Calvi A, et al. <strong>(17/17, Corresponding author)</strong>.
-        </div>
-        <div class="publication-journal">
-            Hum Brain Mapp. 2024 Jun 1;45(8):e26706.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1002/hbm.26706" target="_blank">https://doi.org/10.1002/hbm.26706</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Body size interacts with the structure of the central nervous system: A multi-center in vivo neuroimaging study.
-        </div>
-        <div class="publication-authors">
-            Labounek R, Bondy MT, Paulson AL et al. <strong>(61/93)</strong>.
-        </div>
-        <div class="publication-journal">
-            Biorxiv: The Preprint Server For Biology. ISSN 2692-8205. 2024.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1101/2024.04.29.591421" target="_blank">https://doi.org/10.1101/2024.04.29.591421</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Multiscale networks in multiple sclerosis. 
-        </div>
-        <div class="publication-authors">
-            Kennedy KE, Kerlero de Rosbo N, Uccelli A, et al. <strong>(32/37)</strong>.
-        </div>
-        <div class="publication-journal">
-            PLoS Comput Biol. 2024 Feb 8;20(2):e1010980.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1371/journal.pcbi.1010980" target="_blank">https://doi.org/10.1371/journal.pcbi.1010980</a>
-        </div>
-    </div>
-
-
-    <div class="publication">
-        <div class="publication-title">
-            Study protocol - elucidating the neural correlates of functional remediation for older adults with bipolar disorder.
-        </div>
-        <div class="publication-authors">
-            Montejo L, Sole B, Fortea L, Jimenez E, et al. <strong>(6/15)</strong>.
-        </div>
-        <div class="publication-journal">
-            Front Psychiatry. 2024 Jan 17;14:1302255.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.3389/fpsyt.2023.1302255" target="_blank">https://doi.org/10.3389/fpsyt.2023.1302255</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Predicting disease severity in multiple sclerosis using multimodal data and machine learning.
-        </div>
-        <div class="publication-authors">
-            Andorra M, Freire A, Zubizarreta I, et al. <strong>(20/40)</strong>.
-        </div>
-        <div class="publication-journal">
-            J Neurol. 2024 Mar;271(3):1133-1149.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1007/s00415-023-12132-z" target="_blank">https://doi.org/10.1007/s00415-023-12132-z</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Predictive value of retinal atrophy for cognitive decline across disease duration in multiple sclerosis.
-        </div>
-        <div class="publication-authors">
-            Alba-Arbalat S, Solana E, Lopez-Soley E, et al. <strong>(5/20)</strong>.
-        </div>
-        <div class="publication-journal">
-            J Neurol Neurosurg Psychiatry. 2024 Apr 12;95(5):419-425.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1136/jnnp-2023-332332" target="_blank">https://doi.org/10.1136/jnnp-2023-332332</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            White matter changes measured by multi-component MR Fingerprinting in multiple sclerosis.
-        </div>
-        <div class="publication-authors">
-            Nagtegaal MA, Hermann I, Weingärtner S, et al. <strong>(4/11)</strong>.
-        </div>
-        <div class="publication-journal">
-            Neuroimage Clin. 2023;40:103528.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/j.nicl.2023.103528" target="_blank">https://doi.org/10.1016/j.nicl.2023.103528</a>
-        </div>
-    </div>
-
-
-    <div class="publication">
-        <div class="publication-title">
-            Diffusion-based structural connectivity patterns of multiple sclerosis phenotypes.
-        </div>
-        <div class="publication-authors">
-            <strong>Martinez-Heras E</strong>, Solana E, Vivó F, et al. <strong>(1/28)</strong>.
-        </div>
-        <div class="publication-journal">
-            J Neurol Neurosurg Psychiatry. 2023 Jun 15:jnnp-2023-331531.
-        </div>
-        <div class="publication-doi">
-            <a href="http://doi.org/10.1136/jnnp-2023-331531" target="_blank">http://doi.org/10.1136/jnnp-2023-331531</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Diffusion tensor imaging metrics associated with future disability in multiple sclerosis.
-        </div>
-        <div class="publication-authors">
-            <strong>Martinez-Heras, E</strong> & Lopez-Soley, E. & Solana, E, et al. <strong>(1/16, Corresponding author)</strong>.
-        </div>
-        <div class="publication-journal">
-            Sci Rep 13, 3565 (2023).
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1038/s41598-023-30502-5" target="_blank">https://doi.org/10.1038/s41598-023-30502-5</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Using The Virtual Brain to study the relationship between structural and functional connectivity in patients with multiple sclerosis: a multicenter study.
-        </div>
-        <div class="publication-authors">
-            Martí-Juan G, Sastre-Garriga J, <strong>Martinez-Heras E</strong>, et al. <strong>(3/20)</strong>.
-        </div>
-        <div class="publication-journal">
-            Cereb Cortex. 2023 Feb 22:bhad041.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1093/cercor/bhad041" target="_blank">doi: 10.1093/cercor/bhad041</a>
-        </div>
-    </div> 
-
-    <div class="publication">
-        <div class="publication-title">
-            Removing the effects of the site in brain imaging machine-learning - Measurement and extendable benchmark.
-        </div>
-        <div class="publication-authors">
-            Solanes A, Gosling CJ, Fortea L, et al. <strong>(8/13)</strong>.
-        </div>
-        <div class="publication-journal">
-            Neuroimage. 2023 Jan;265:119800.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/j.neuroimage.2022.119800" target="_blank">doi: 10.1016/j.neuroimage.2022.119800</a>
-        </div>
-    </div>
-   
-    <div class="publication">
-        <div class="publication-title">
-            Intense long-term training impairs brain health compared with moderate exercise: Experimental evidence and mechanisms.
-        </div>
-        <div class="publication-authors">
-            Sangüesa G, Batlle M, Muñoz-Moreno E, et al. <strong>(9/14)</strong>.
-        </div>
-        <div class="publication-journal">
-            Ann N Y Acad Sci. 2022 Dec;1518(1):282-298.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1111/nyas.14912" target="_blank">doi: 10.1111/nyas.14912</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Applying multilayer analysis to morphological, structural and functional brain networks to identify relevant dysfunction patterns.
-        </div>
-        <div class="publication-authors">
-            <strong>Martinez-Heras E</strong> & Casas-Roma J, Solé-Ribalta A, et al. <strong>(1/14)</strong>.
-        </div>
-        <div class="publication-journal">
-            Network Neuroscience 2022.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1162/netn_a_00258" target="_blank">doi: 10.1162/netn_a_00258</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Recent advances in the longitudinal segmentation of multiple sclerosis lesions on magnetic resonance imaging: a review.
-        </div>
-        <div class="publication-authors">
-            Diaz-Hurtado M, <strong>Martínez-Heras E</strong>, Solana E, et al. <strong>(2/7)</strong>.
-        </div>
-        <div class="publication-journal">
-            Neuroradiology. 2022 Jul 22.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1007/s00234-022-03019-3" target="_blank">doi: 10.1007/s00234-022-03019-3</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Dynamics and Predictors of Cognitive Impairment along the Disease Course in Multiple Sclerosis.
-        </div>
-        <div class="publication-authors">
-            Lopez-Soley E, <strong>Martinez-Heras E</strong>, Andorra M, et al. <strong>(2/19)</strong>.
-        </div>
-        <div class="publication-journal">
-            J Pers Med. 2021 Oct 28;11(11):1107.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.3390/jpm11111107" target="_blank">doi: 10.3390/jpm11111107</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Open-access quantitative MRI data of the spinal cord and reproducibility across participants, sites and manufacturers.
-        </div>
-        <div class="publication-authors">
-            Cohen-Adad J, Alonso-Ortiz E, Abramovic M, et al. <strong>(58/40)</strong>.
-        </div>
-        <div class="publication-journal">
-            Sci Data. 2021 Sep 23;8(1):251.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1038/s41597-021-01044-0" target="_blank">doi: 10.1038/s41597-021-01044-0</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Fully automated delineation of the optic radiation for surgical planning using clinically feasible sequences.
-        </div>
-        <div class="publication-authors">
-            Reid LB, <strong>Martinez-Heras E</strong>, Manjón JV, et al. <strong>(2/11)</strong>.
-        </div>
-        <div class="publication-journal">
-            Hum Brain Mapp. 2021 Dec 15;42(18):5911-5926.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1002/hbm.25658" target="_blank">doi: 10.1002/hbm.25658</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Diffusion-Weighted Imaging: Recent Advances and Applications.
-        </div>
-        <div class="publication-authors">
-            <strong>Martinez-Heras E</strong> & Grussu F, Prados F, et al. <strong>(1/5, Corresponding author)</strong>.
-        </div>
-        <div class="publication-journal">
-            Semin Ultrasound CT MR. 2021 Oct;42(5):490-506.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1053/j.sult.2021.07.006" target="_blank">doi: 10.1053/j.sult.2021.07.006</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Regional grey matter microstructural changes and volume loss according to disease duration in multiple sclerosis patients.
-        </div>
-        <div class="publication-authors">
-            <strong>Martinez-Heras E</strong> & Solana E, Montal V, Vilaplana E, et al. <strong>(1/19, Corresponding author)</strong>.
-        </div>
-        <div class="publication-journal">
-            Sci Rep. 2021 Aug 19;11(1):16805.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1038/s41598-021-96132-x" target="_blank">doi: 10.1038/s41598-021-96132-x</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Generic acquisition protocol for quantitative MRI of the spinal cord.
-        </div>
-        <div class="publication-authors">
-            Cohen-Adad J, Alonso-Ortiz E, Abramovic M, et al. <strong>(58/40)</strong>.
-        </div>
-        <div class="publication-journal">
-            Nat Protoc. 2021 Oct;16(10):4611-4632.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1038/s41596-021-00588-0" target="_blank">doi: 10.1038/s41596-021-00588-0</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Lesion probability mapping in MS patients using a regression network on MR fingerprinting.
-        </div>
-        <div class="publication-authors">
-            Hermann I, Golla AK, <strong>Martínez-Heras E</strong>, et al. <strong>(3/9)</strong>.
-        </div>
-        <div class="publication-journal">
-            BMC Med Imaging. 2021 Jul 8;21(1):107.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1186/s12880-021-00636-x" target="_blank">doi: 10.1186/s12880-021-00636-x</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Synthetic MRI in subarachnoid haemorrhage.
-        </div>
-        <div class="publication-authors">
-            Montejo C, Laredo C, Llull L, et al. <strong>(4/10)</strong>.
-        </div>
-        <div class="publication-journal">
-            Clin Radiol. 2021 Oct;76(10):785.e17-785.e23.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/j.crad.2021.05.021" target="_blank">doi: 10.1016/j.crad.2021.05.021</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Cortical fractal dimension predicts disability worsening in Multiple Sclerosis patients.
-        </div>
-        <div class="publication-authors">
-            Roura E, Maclair G, Andorrà M, et al. <strong>(10/13)</strong>.
-        </div>
-        <div class="publication-journal">
-            Neuroimage Clin. 2021;30:102653.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/j.nicl.2021.102653" target="_blank">doi: 10.1016/j.nicl.2021.102653</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Accelerated white matter lesion analysis based on simultaneous T1 and T2∗ quantification using magnetic resonance fingerprinting and deep learning.
-        </div>
-        <div class="publication-authors">
-            Hermann I, <strong>Martínez-Heras E</strong>, Rieger B, et al. <strong>(2/15)</strong>.
-        </div>
-        <div class="publication-journal">
-            Magn Reson Med. 2021 Jul;86(1):471-486.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1002/mrm.28688" target="_blank">doi: 10.1002/mrm.28688</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Incidence and Impact of COVID-19 in MS: A Survey From a Barcelona MS Unit.
-        </div>
-        <div class="publication-authors">
-            Sepúlveda M, Llufriu S, Martínez-Hernández E, et al. <strong>(9/18)</strong>.
-        </div>
-        <div class="publication-journal">
-            Neurol Neuroimmunol Neuroinflamm. 2021 Jan 27;8(2):e954.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1212/NXI.0000000000000954" target="_blank">doi: 10.1212/NXI.0000000000000954</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Oligoclonal IgM bands in the cerebrospinal fluid of patients with relapsing MS to inform long-term MS disability.
-        </div>
-        <div class="publication-authors">
-            Capuano R, Zubizarreta I, Alba-Arbalat S, et al. <strong>(8/20)</strong>.
-        </div>
-        <div class="publication-journal">
-            Mult Scler. 2021 Oct;27(11):1706-1716.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1177/1352458520981910" target="_blank">doi: 10.1177/1352458520981910</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Impact of Cognitive Reserve and Structural Connectivity on Cognitive Performance in Multiple Sclerosis.
-        </div>
-        <div class="publication-authors">
-            Lopez-Soley E, Solana E, <strong>Martínez-Heras E</strong>, et al. <strong>(3/14)</strong>.
-        </div>
-        <div class="publication-journal">
-            Front Neurol. 2020 Oct 30;11:581700.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.3389/fneur.2020.581700" target="_blank">doi: 10.3389/fneur.2020.581700</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Characterization of multiple sclerosis lesions with distinct clinical correlates through quantitative diffusion MRI.
-        </div>
-        <div class="publication-authors">
-            <strong>Martínez-Heras E</strong> & Solana E, Prados F, Andorrà M, et al. <strong>(1/15)</strong>.
-        </div>
-        <div class="publication-journal">
-            Neuroimage Clin. 2020;28:102411.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/j.nicl.2020.102411" target="_blank">doi: 10.1016/j.nicl.2020.102411</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Retinal and brain damage during multiple sclerosis course: inflammatory activity is a key factor in the first 5 years.
-        </div>
-        <div class="publication-authors">
-            Pulido-Valdeolivas I, Andorrà M, Gómez-Andrés D, et al. <strong>(9/19)</strong>.
-        </div>
-        <div class="publication-journal">
-            Sci Rep. 2020 Aug 7;10(1):13333.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1038/s41598-020-70255-z" target="_blank">doi: 10.1038/s41598-020-70255-z</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Increased power by harmonizing structural MRI site differences with the ComBat batch adjustment method in ENIGMA.
-        </div>
-        <div class="publication-authors">
-            Radua J, Vieta E, Shinohara R, et al. <strong>(76/83)</strong>.
-        </div>
-        <div class="publication-journal">
-            Neuroimage. 2020 Sep;218:116956.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/j.neuroimage.2020.116956" target="_blank">doi: 10.1016/j.neuroimage.2020.116956</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Modified connectivity of vulnerable brain nodes in multiple sclerosis, their impact on cognition and their discriminative value.
-        </div>
-        <div class="publication-authors">
-            <strong>Martínez-Heras E</strong> & Solana E, Casas-Roma J, Calvet L, et al. <strong>(1/14)</strong>.
-        </div>
-        <div class="publication-journal">
-            Sci Rep. 2019 Dec 27;9(1):20172.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1038/s41598-019-56806-z" target="_blank">doi: 10.1038/s41598-019-56806-z</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Spanish validation of the telephone assessed Expanded Disability Status Scale and Patient Determined Disease Steps in people with multiple sclerosis.
-        </div>
-        <div class="publication-authors">
-            Solà-Valls N, Vicente-Pascual M, Blanco Y, et al. <strong>(6/11)</strong>.
-        </div>
-        <div class="publication-journal">
-            Mult Scler Relat Disord. 2019 Jan;27:333-339.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/j.msard.2018.11.018" target="_blank">doi: 10.1016/j.msard.2018.11.018</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Magnetic resonance markers of tissue damage related to connectivity disruption in multiple sclerosis.
-        </div>
-        <div class="publication-authors">
-            <strong>Martinez-Heras E</strong> & Solana E, Martinez-Lapiscina EH, Sepulveda M, et al. <strong>(1/13)</strong>.
-        </div>
-        <div class="publication-journal">
-            Neuroimage Clin. 2018 Jul 12;20:161-168.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/j.nicl.2018.07.012" target="_blank">doi: 10.1016/j.nicl.2018.07.012</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Frequency, symptoms, risk factors, and outcomes of autoimmune encephalitis after herpes simplex encephalitis: a prospective observational study and retrospective analysis.
-        </div>
-        <div class="publication-authors">
-            Armangue T, Spatola M, Vlagea A, et al. <strong>(6/27)</strong>.
-        </div>
-        <div class="publication-journal">
-            Lancet Neurol. 2018 Sep;17(9):760-772.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/S1474-4422(18)30244-8" target="_blank">doi: 10.1016/S1474-4422(18)30244-8</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Assessing Biological and Methodological Aspects of Brain Volume Loss in Multiple Sclerosis.
-        </div>
-        <div class="publication-authors">
-            Andorra M, Nakamura K, Lampert EJ, et al. <strong>(7/14)</strong>.
-        </div>
-        <div class="publication-journal">
-            JAMA Neurol. 2018 Oct 1;75(10):1246-1255.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1001/jamaneurol.2018.1596" target="_blank">doi: 10.1001/jamaneurol.2018.1596</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Time efficient whole-brain coverage with MR Fingerprinting using slice-interleaved echo-planar-imaging.
-        </div>
-        <div class="publication-authors">
-            Rieger B, Akçakaya M, Pariente JC, et al. <strong>(5/7)</strong>.
-        </div>
-        <div class="publication-journal">
-            Sci Rep. 2018 Apr 27;8(1):6667.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1038/s41598-018-24920-z" target="_blank">doi: 10.1038/s41598-018-24920-z</a>
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Cortical microstructural changes along the Alzheimer's disease continuum.
-        </div>
-        <div class="publication-authors">
-            Montal V, Vilaplana E, Alcolea D, et al. <strong>(24/30)</strong>.
-        </div>
-        <div class="publication-journal">
-            Alzheimers Dement. 2018 Mar;14(3):340-351.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/j.jalz.2017.09.013" target="_blank">doi: 10.1016/j.jalz.2017.09.013</a>. Epub 2017 Oct 31. PMID: 29080407.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Structural networks involved in attention and executive functions in multiple sclerosis.
-        </div>
-        <div class="publication-authors">
-            <strong>Martinez-Heras E</strong> & Llufriu S, Solana E, Sola-Valls N, et al. 
-        </div>
-        <div class="publication-journal">
-            Neuroimage Clin. 2016 Dec 5;13:288-296.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/j.nicl.2016.11.026" target="_blank">doi: 10.1016/j.nicl.2016.11.026</a>.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Enhanced mirror activity in 'crossed' reaction time tasks in multiple sclerosis.
-        </div>
-        <div class="publication-authors">
-            Cabib C, Llufriu S, <strong>Martinez-Heras E</strong>, et al.
-        </div>
-        <div class="publication-journal">
-            Clin Neurophysiol. 2016 Apr;127(4):2001-9.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1016/j.clinph.2016.01.017" target="_blank">doi: 10.1016/j.clinph.2016.01.017</a>.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Reproducibility of the Structural Connectome Reconstruction across Diffusion Methods.
-        </div>
-        <div class="publication-authors">
-            Prčkovska V, Rodrigues P, Puigdellivol Sanchez A, et al.
-        </div>
-        <div class="publication-journal">
-            J Neuroimaging. 2016 Jan-Feb;26(1):46-57.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1111/jon.12298" target="_blank">doi: 10.1111/jon.12298</a>.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Improved Framework for Tractography Reconstruction of the Optic Radiation.
-        </div>
-        <div class="publication-authors">
-            <strong>Martínez-Heras E</strong>, Varriano F, Prčkovska V, et al.
-        </div>
-        <div class="publication-journal">
-            PLoS One. 2015 Sep 16;10(9):e0137064.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1371/journal.pone.0137064" target="_blank">doi: 10.1371/journal.pone.0137064</a>.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            The multiple sclerosis visual pathway cohort: understanding neurodegeneration in MS.
-        </div>
-        <div class="publication-authors">
-            Martínez-Lapiscina EH, Fraga-Pumar E, Gabilondo I, et al.
-        </div>
-        <div class="publication-journal">
-            BMC Res Notes. 2014 Dec 15;7:910.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1186/1756-0500-7-910" target="_blank">doi: 10.1186/1756-0500-7-910</a>.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Randomized placebo-controlled phase II trial of autologous mesenchymal stem cells in multiple sclerosis.
-        </div>
-        <div class="publication-authors">
-            Llufriu S, Sepúlveda M, Blanco Y, et al.
-        </div>
-        <div class="publication-journal">
-            PLoS One. 2014 Dec 1;9(12):e113936.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1371/journal.pone.0113936" target="_blank">doi: 10.1371/journal.pone.0113936</a>.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Abnormal control of orbicularis oculi reflex excitability in multiple sclerosis.
-        </div>
-        <div class="publication-authors">
-            Cabib C, Llufriu S, <strong>Martínez-Heras E</strong>, et al.
-        </div>
-        <div class="publication-journal">
-            PLoS One. 2014 Aug 1;9(8):e103897.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1371/journal.pone.0103897" target="_blank">doi: 10.1371/journal.pone.0103897</a>.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Colour vision impairment is associated with disease severity in multiple sclerosis.
-        </div>
-        <div class="publication-authors">
-            Martínez-Lapiscina EH, Ortiz-Pérez S, Fraga-Pumar E, et al.
-        </div>
-        <div class="publication-journal">
-            Mult Scler. 2014 Aug;20(9):1207-16.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1177/1352458513517591" target="_blank">doi: 10.1177/1352458513517591</a>.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Trans-synaptic axonal degeneration in the visual pathway in multiple sclerosis.
-        </div>
-        <div class="publication-authors">
-            Gabilondo I, Martínez-Lapiscina EH, <b>Martínez-Heras E</b>, et al.
-        </div>
-        <div class="publication-journal">
-            Ann Neurol. 2014 Jan;75(1):98-107.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1002/ana.24030" target="_blank">doi: 10.1002/ana.24030</a>.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Cognitive functions in multiple sclerosis: impact of gray matter integrity.
-        </div>
-        <div class="publication-authors">
-            Llufriu S, <strong>Martínez-Heras E</strong>, Fortea J, et al.
-        </div>
-        <div class="publication-journal">
-            Mult Scler. 2014 Apr;20(4):424-32.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1177/1352458513503722" target="_blank">doi: 10.1177/1352458513503722</a>.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Retinal periphlebitis is associated with multiple sclerosis severity.
-        </div>
-        <div class="publication-authors">
-            Ortiz-Pérez S, Martínez-Lapiscina EH, Gabilondo I, et al.
-        </div>
-        <div class="publication-journal">
-            Neurology. 2013 Sep 3;81(10):877-81.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1212/WNL.0b013e3182a3525e" target="_blank">doi: 10.1212/WNL.0b013e3182a3525e</a>.
-        </div>
-    </div>
-
-    <div class="publication">
-        <div class="publication-title">
-            Influence of corpus callosum damage on cognition and physical disability in multiple sclerosis: a multimodal study.
-        </div>
-        <div class="publication-authors">
-            Llufriu S, Blanco Y, <b>Martinez-Heras E</b>, et al.
-        </div>
-        <div class="publication-journal">
-            PLoS One. 2012;7(5):e37167.
-        </div>
-        <div class="publication-doi">
-            <a href="https://doi.org/10.1371/journal.pone.0037167" target="_blank">doi: 10.1371/journal.pone.0037167</a>.
-        </div>
-    </div>
-
-</div>
-
-
-<!-- Your projects content goes here -->
-
-        <div id="Projects" class="tabcontent">
-            <h2>R&D Projects</h2>
-
-            <table>
-            <thead>
-                <tr>
-                    <th>Project Code</th>
-                    <th>Project Name</th>
-                    <th>Agency/Fund</th>
-                    <th>Duration</th>
-                    <th>Role</th>
-                </tr>
-            </thead>
-                <tbody>
-                    <tr>
-                        <td>2021-SGR-01325</td>
-                        <td>Grup d'Imatge Avançada en Malalties Neuroimmunològiques (ImaginEM)</td>
-                        <td>Agència de Gestió d’Ajuts Universitaris i de Recerca (AGAUR)</td>
-                        <td>01/01/2022-31/12/2024</td>
-                        <td>Team member</td>
-                    </tr>
-    
-                    <tr>
-                        <td>PI21/01189</td>
-                        <td>Neuroimaging multi-modal approach to understand mechanisms of tissue DAmage in Multiple sclerosis   patients and predictive models (daMoS)</td>
-                        <td>Instituto Carlos III (Ministerio de ciencia e Innovacion).<br>(IDIBAPS (August Pi i Sunyer Biomedical   Research Institute), Barcelona, Spain)</td>
-                        <td>01/01/2022-31/12/2024</td>
-                        <td>Team member</td>
-                    </tr>
-    
-                    <tr>
-                        <td>TV3_Ictus_17</td>
-                        <td>Blood brain barrier disruption after subarachnoid hemorrhage: clinical relevance, role of hyperglycemia and effect of potentiating endogenous antioxidant mechanisms. A translational study.</td>
-                        <td>Fundació La Marató de TV3.<br>(IDIBAPS (August Pi i Sunyer Biomedical Research Institute), Barcelona, Spain)</td>
-                        <td>10/07/2018-31/01/2023</td>
-                        <td>Team member</td>
-                    </tr>
-
-                     <tr>
-                        <td>PI18/01030</td>
-                        <td>Rehabilitación cognitiva y plasticidad cerebral en la esclerosis múltiple: en búsqueda de la evidencia.</td>
-                        <td>Instituto de Salud Carlos III FIS-ISCIII.<br>(IDIBAPS (August Pi i Sunyer Biomedical Research Institute), Barcelona, Spain)</td>
-                        <td>01/01/2019-31/12/2021</td>
-                        <td>Team member</td>
-                    </tr>
-
-                    <tr>
-                        <td>RD16/0015/0002</td>
-                        <td>Redes temáticas de investigación de cooperativa en salud. Red esclerosis múltiple (REEM).</td>
-                        <td>IDIBAPS (August Pi i Sunyer Biomedical Research Institute)</td>
-                        <td>01/01/2017-31/12/2021</td>
-                        <td>Team member</td>
-                    </tr>
-
-                    <tr>
-                        <td>PI15/00587</td>
-                        <td>Biomarcadores de resonancia magnética avanzada en esclerosis múltiple: asociación con el perfil clínico evolutivo y el sustrato genético.</td>
-                        <td>Instituto de Salud Carlos III (ISCIII).<br>(IDIBAPS (August Pi i Sunyer Biomedical Research Institute), Barcelona, Spain)</td>
-                        <td>01/01/2016-30/11/2020</td>
-                        <td>Team member</td>
-                    </tr>
-
-                    <tr>
-                        <td>CEIC 7965</td>
-                        <td>Non-conventional MRI as predictive marker of treatment response.</td>
-                        <td>TEVA Spain SLU.<br>(IDIBAPS (August Pi i Sunyer Biomedical Research Institute))</td>
-                        <td>01/03/2013-31/12/2018</td>
-                        <td>Team member</td>
-                    </tr>
-
-                    <tr>
-                        <td>RD12/0032/0002</td>
-                        <td>Red Española de Esclerosis Múltiple (REEM)</td>
-                        <td>MINISTERIO DE SANIDAD Y CONSUMO.<br>(IDIBAPS (August Pi i Sunyer Biomedical Research Institute))</td>
-                        <td>01/01/2013-01/01/2016</td>
-                        <td>Team member</td>
-                    </tr>
-
-                    <tr>
-                        <td>Not Provided</td>
-                        <td>Rehabilitación cognitiva y plasticidad cerebral en la Esclerosis Múltiple: evaluación a través de un ensayo clínico aleatorizado y controlado</td>
-                        <td>Fundación Merck Salud.<br>(IDIBAPS (August Pi i Sunyer Biomedical Research Institute), Barcelona, Spain)</td>
-                        <td>01/06/2017-01/07/2021</td>
-                        <td>Team member</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-
-<!-- Your congress content goes here -->
-        <div id="Workshops" class="tabcontent">
-            <h2>Workshops & Educational series</h2>
-            <ol>
-                <li>2nd National Course of SPM (Statistical Parametric Mapping). September, 2010.  Barcelona, Spain.</li>
-                <li>Annual Meeting of the Organization for Human Brain Mapping.  June 26-30, 2011. Québec City, Canada.</li>
-                <li>ISMRM Workshop on Diffusion as a Probe of Neural Tissue Microstructure. October 14-18, 2013. Podstrana, Croatia.</li>
-                <li>31st Congress of the European committee for treatment and research in Multiple Sclerosis (ECTRIMS). October 7-10 , 2015. Barcelona, Spain.</li>
-                <li>ESMRMB course of clinical fMRI & DTI. June 16-18, 2016. Barcelona, Spain.</li>
-                <li>School on brain connectomics. October 09-13, 2017. Verona, Italy.</li>
-                <li>Spinal Cord MRI workshop@UCL. January 21-22, Gower Street, London, United Kingdom.</li>
-                <li>Annual Meeting of the Organization for Human Brain Mapping.  June 09-13, 2019. Roma, Italy.</li>
-                <li>36th Annual Scientific Meeting of the ESMRMB. October 3-5, 2019. Rotterdam, Netherlands. Scientific Sessions A-1330. Microscopic diffusion anisotropy imaging as a potential biomarker for the pathogenesis of Multiple Sclerosis lesions.</li>
-            </ol>
-        </div>
-
-
-
-<script>
-    function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-    }
-</script>
-
-<footer>
-    <p>&copy; 2023 Eloy Martínez de las Heras. All rights reserved.</p>
-</footer>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-md-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center mb-4 mb-md-0">
+                    <img src="eloy_picture.jpg" alt="Eloy Martínez de las Heras" class="profile-img rounded-circle">
+                </div>
+                <div class="col-md-9">
+                    <h1 class="display-5 fw-bold">Eloy Martínez de las Heras</h1>
+                    <h4 class="mb-3 opacity-75">Postdoctoral Researcher (R2A) | Computational Neuroimaging</h4>
+                    <p class="lead mb-4 fs-6">
+                        Advanced Imaging in Neuroimmunological Diseases (ImaginEM) group at IDIBAPS & Hospital Clínic Barcelona. 
+                        Developing automated MRI analysis methods to identify biomarkers for Multiple Sclerosis.
+                    </p>
+                    <div class="d-flex gap-2 justify-content-center justify-content-md-start flex-wrap">
+                        <a href="mailto:emartind@recerca.clinic.cat" class="btn btn-light"><i class="fas fa-envelope me-2"></i> Contact</a>
+                        <a href="https://orcid.org/0000-0001-9937-3162" target="_blank" class="btn btn-outline-light"><i class="fab fa-orcid me-2"></i> ORCID</a>
+                        <a href="https://www.clinicbarcelona.org/profesionales/eloy-martinez-heras" target="_blank" class="btn btn-outline-light"><i class="fas fa-hospital me-2"></i> Clinic Barcelona</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About & Skills -->
+    <section id="about" class="bg-white-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="section-title">Professional Summary</h2>
+                    <p class="text-muted">
+                        I am a Postdoctoral Researcher with a multidisciplinary background in Chemical Engineering, Biomedical Engineering, and Medicine. 
+                        For over a decade, my research has focused on developing advanced MRI analysis methods to identify quantitative biomarkers for Multiple Sclerosis (MS) and other neuroimmunological diseases.
+                    </p>
+                    <p class="text-muted">
+                        My key contributions include characterizing subtle white/gray matter changes, conducting brain network analysis, and applying machine learning for predictive disease modeling. 
+                        A major technical achievement was leading the implementation of the <strong>XNAT platform</strong> for automated MRI processing.
+                    </p>
+                </div>
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="card bg-light border-0 p-4">
+                        <h5 class="fw-bold mb-3">Key Competencies</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge rounded-pill badge-custom">MRI Analysis</span>
+                            <span class="badge rounded-pill badge-custom">Neuroimaging</span>
+                            <span class="badge rounded-pill badge-custom">Data Science</span>
+                            <span class="badge rounded-pill badge-custom">XNAT Implementation</span>
+                            <span class="badge rounded-pill badge-custom">Graph Theory</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline-item">
+                <h5 class="fw-bold">Postdoctoral Researcher (R2A)</h5>
+                <p class="text-primary mb-1">IDIBAPS - Hospital Clínic de Barcelona | ImaginEM Group</p>
+                <p class="small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> June 2018 – Present</p>
+            </div>
+            <div class="timeline-item">
+                <h5 class="fw-bold">Professor (Artificial Intelligence)</h5>
+                <p class="text-primary mb-1">Universitat Oberta de Catalunya (UOC)</p>
+                <p class="small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> 2025 (Master in Computer Engineering)</p>
+            </div>
+            <div class="timeline-item">
+                <h5 class="fw-bold">Predoctoral Researcher</h5>
+                <p class="text-primary mb-1">Hospital Clínic de Barcelona</p>
+                <p class="small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> 2010 – 2017</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS (Full Table) -->
+    <section id="projects" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">R&D Projects</h2>
+            <div class="card shadow-sm">
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Project Name</th>
+                                    <th>Agency / Fund</th>
+                                    <th>Duration</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Newest Project from PDF -->
+                                <tr class="table-primary">
+                                    <td><strong>PI24/00567</strong></td>
+                                    <td>MS Disability Accumulation: combined models of damage, repair and reserve</td>
+                                    <td>Instituto de Salud Carlos III</td>
+                                    <td>2025 - 2027</td>
+                                    <td>Team Member</td>
+                                </tr>
+                                <!-- Projects from your snippet -->
+                                <tr>
+                                    <td><strong>2021-SGR-01325</strong></td>
+                                    <td>Grup d'Imatge Avançada en Malalties Neuroimmunològiques (ImaginEM)</td>
+                                    <td>AGAUR</td>
+                                    <td>2022 - 2024</td>
+                                    <td>Team Member</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PI21/01189</strong></td>
+                                    <td>Neuroimaging multi-modal approach (daMoS)</td>
+                                    <td>Instituto Carlos III (IDIBAPS)</td>
+                                    <td>2022 - 2024</td>
+                                    <td>Team Member</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>TV3_Ictus_17</strong></td>
+                                    <td>Blood brain barrier disruption after subarachnoid hemorrhage</td>
+                                    <td>Fundació La Marató de TV3</td>
+                                    <td>2018 - 2023</td>
+                                    <td>Team Member</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PI18/01030</strong></td>
+                                    <td>Rehabilitación cognitiva y plasticidad cerebral en la esclerosis múltiple</td>
+                                    <td>Instituto de Salud Carlos III</td>
+                                    <td>2019 - 2021</td>
+                                    <td>Team Member</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>RD16/0015/0002</strong></td>
+                                    <td>Redes temáticas de investigación (REEM)</td>
+                                    <td>IDIBAPS</td>
+                                    <td>2017 - 2021</td>
+                                    <td>Team Member</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PI15/00587</strong></td>
+                                    <td>Biomarcadores de RM avanzada en esclerosis múltiple</td>
+                                    <td>Instituto de Salud Carlos III</td>
+                                    <td>2016 - 2020</td>
+                                    <td>Team Member</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CEIC 7965</strong></td>
+                                    <td>Non-conventional MRI as predictive marker of treatment response</td>
+                                    <td>TEVA Spain SLU</td>
+                                    <td>2013 - 2018</td>
+                                    <td>Team Member</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>RD12/0032/0002</strong></td>
+                                    <td>Red Española de Esclerosis Múltiple (REEM)</td>
+                                    <td>Ministerio de Sanidad</td>
+                                    <td>2013 - 2016</td>
+                                    <td>Team Member</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>-</strong></td>
+                                    <td>Rehabilitación cognitiva y plasticidad cerebral en la Esclerosis Múltiple</td>
+                                    <td>Fundación Merck Salud</td>
+                                    <td>2017 - 2021</td>
+                                    <td>Team Member</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKSHOPS -->
+    <section id="workshops" class="bg-white-section">
+        <div class="container">
+            <h2 class="section-title">Workshops & Educational Series</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <ul class="list-group workshop-list list-group-flush">
+                        <li class="list-group-item">
+                            <span class="workshop-date">Oct 2019</span>
+                            <strong>36th Annual Scientific Meeting of the ESMRMB</strong> (Rotterdam). Scientific Sessions A-1330.
+                        </li>
+                        <li class="list-group-item">
+                            <span class="workshop-date">June 2019</span>
+                            <strong>Annual Meeting of the Organization for Human Brain Mapping</strong> (Rome, Italy).
+                        </li>
+                        <li class="list-group-item">
+                            <span class="workshop-date">Jan 2018</span>
+                            <strong>Spinal Cord MRI workshop@UCL</strong> (London, UK).
+                        </li>
+                        <li class="list-group-item">
+                            <span class="workshop-date">Oct 2017</span>
+                            <strong>School on brain connectomics</strong> (Verona, Italy).
+                        </li>
+                        <li class="list-group-item">
+                            <span class="workshop-date">June 2016</span>
+                            <strong>ESMRMB course of clinical fMRI & DTI</strong> (Barcelona, Spain).
+                        </li>
+                        <li class="list-group-item">
+                            <span class="workshop-date">Oct 2015</span>
+                            <strong>31st Congress of ECTRIMS</strong> (Barcelona, Spain).
+                        </li>
+                        <li class="list-group-item">
+                            <span class="workshop-date">Oct 2013</span>
+                            <strong>ISMRM Workshop on Diffusion</strong> (Podstrana, Croatia).
+                        </li>
+                        <li class="list-group-item">
+                            <span class="workshop-date">June 2011</span>
+                            <strong>Annual Meeting of the Organization for Human Brain Mapping</strong> (Québec City, Canada).
+                        </li>
+                        <li class="list-group-item">
+                            <span class="workshop-date">Sept 2010</span>
+                            <strong>2nd National Course of SPM</strong> (Statistical Parametric Mapping) (Barcelona, Spain).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+        <div class="container">
+            <h2 class="section-title">Selected Publications</h2>
+            <p class="text-muted mb-4">Showing recent highlights. See full list on <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Martinez-Heras+E" target="_blank">PubMed</a>.</p>
+
+            <!-- Highlighting recent 2025-2024 works from PDF -->
+            <div class="publication-item">
+                <h5 class="fw-bold text-primary">Advances in MRI optic nerve segmentation</h5>
+                <p class="mb-1 text-muted small">Xena-Bosch C, ..., <strong>Martinez-Heras E</strong>, et al.</p>
+                <p class="mb-0 fst-italic small">Multiple Sclerosis and Related Disorders (2025)</p>
+            </div>
+
+            <div class="publication-item">
+                <h5 class="fw-bold text-primary">Efficacy of cognitive rehabilitation in cognition and brain networks</h5>
+                <p class="mb-1 text-muted small">Lopez-Soley E, <strong>Martinez-Heras E</strong>, Vivo F, et al.</p>
+                <p class="mb-0 fst-italic small">Neuroimage-Clinical (2025)</p>
+            </div>
+
+            <div class="publication-item">
+                <h5 class="fw-bold text-primary">Artificial Intelligence and Multiple Sclerosis</h5>
+                <p class="mb-1 text-muted small">Amin M, <strong>Martinez-Heras E</strong>, Ontaneda D, Prados F.</p>
+                <p class="mb-0 fst-italic small">Current Neurology and Neuroscience Reports (2024)</p>
+            </div>
+
+             <div class="publication-item">
+                <h5 class="fw-bold text-primary">Microscopic fractional anisotropy outperforms multiple sclerosis lesion assessment</h5>
+                <p class="mb-1 text-muted small">Vivó F, Solana E, ..., <strong>Martinez-Heras E</strong> (Corresponding Author).</p>
+                <p class="mb-0 fst-italic small">Human Brain Mapping (2024)</p>
+            </div>
+            
+            <!-- Link to full list -->
+            <div class="mt-3 text-end">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Martinez-Heras+E" class="btn btn-sm btn-outline-primary">View All Publications &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 text-center">
+        <div class="container">
+            <h4 class="mb-4">Get In Touch</h4>
+            <div class="d-flex justify-content-center gap-4 mb-4 fs-3">
+                <a href="mailto:emartind@recerca.clinic.cat" class="text-white"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.researchgate.net/profile/Eloy-Martinez-Heras" target="_blank" class="text-white"><i class="fab fa-researchgate"></i></a>
+                <a href="https://orcid.org/0000-0001-9937-3162" target="_blank" class="text-white"><i class="fab fa-orcid"></i></a>
+            </div>
+            <p class="small opacity-50">
+                &copy; <span id="year"></span> Eloy Martínez de las Heras.<br>
+                Neuroimmunology and Multiple Sclerosis Unit, IDIBAPS – Hospital Clinic of Barcelona.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
 </body>
 </html>
