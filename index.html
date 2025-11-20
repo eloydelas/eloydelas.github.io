@@ -85,10 +85,21 @@
             background-color: #f1f1f1;
             font-size: 0.9rem;
             text-transform: uppercase;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 2px -1px rgba(0,0,0,0.1);
         }
         .table td {
             font-size: 0.95rem;
             vertical-align: middle;
+        }
+        
+        /* SCROLLABLE TABLE CONTAINER FOR TALKS */
+        .table-scroll-container {
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid #dee2e6;
         }
 
         /* WORKSHOPS LIST */
@@ -116,7 +127,7 @@
     <!-- Navigation -->
     <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">Eloy Martínez</a>
+            <a class="navbar-brand fw-bold text-primary" href="#">Eloy Martinez-Heras</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -126,6 +137,7 @@
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#workshops">Workshops</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#talks">Talks</a></li>
                     <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
                 </ul>
             </div>
@@ -137,6 +149,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-3 text-center mb-4 mb-md-0">
+                    <!-- Ensure eloy_picture.jpg is in the same folder -->
                     <img src="eloy_picture.jpg" alt="Eloy Martínez de las Heras" class="profile-img rounded-circle">
                 </div>
                 <div class="col-md-9">
@@ -227,7 +240,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Newest Project from PDF -->
                                 <tr class="table-primary">
                                     <td><strong>PI24/00567</strong></td>
                                     <td>MS Disability Accumulation: combined models of damage, repair and reserve</td>
@@ -235,7 +247,6 @@
                                     <td>2025 - 2027</td>
                                     <td>Team Member</td>
                                 </tr>
-                                <!-- Projects from your snippet -->
                                 <tr>
                                     <td><strong>2021-SGR-01325</strong></td>
                                     <td>Grup d'Imatge Avançada en Malalties Neuroimmunològiques (ImaginEM)</td>
@@ -348,7 +359,7 @@
                         </li>
                         <li class="list-group-item">
                             <span class="workshop-date">Sept 2010</span>
-                            <strong>2nd National Course of SPM</strong> (Statistical Parametric Mapping) (Barcelona, Spain).
+                            <strong>2nd National Course of SPM</strong> (Barcelona, Spain).
                         </li>
                     </ul>
                 </div>
@@ -356,38 +367,130 @@
         </div>
     </section>
 
+    <!-- ORAL PRESENTATIONS -->
+    <section id="talks" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Oral Presentations & Invited Talks</h2>
+            <div class="card shadow-sm">
+                <div class="card-body p-0">
+                    <div class="table-scroll-container">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width: 100px;">Year</th>
+                                    <th>Presentation Title</th>
+                                    <th>Event / Location</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>2025</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2025</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2025</td><td>Therapeutic images: healing, visuality and trust</td><td>VisualTrust Congress, Barcelona</td></tr>
+                                <tr><td>2025</td><td>Workflow in neuroimaging research (RICORS)</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2024</td><td>Advanced Imaging in neuroimmunological diseases (KISTEP)</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2024</td><td>Deep Learning: Introducción y aplicación en la neuroimagen</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2024</td><td>Practical use of synthetic imaging (Uso práctico de la imagen sintética)</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2024</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2024</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2023</td><td>Adaptability of advanced MR imaging techniques to clinical research</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2023</td><td>Integration of automated MRI Image processing into XNAT platform</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2023</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2023</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2023</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2022</td><td>medical image storage and processing infrastructure (XNAT)</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2022</td><td>Deep Learning: Introducción y aplicación en la neuroimagen</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2022</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2022</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2022</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2021</td><td>Advanced diffusion-weighted imaging: Quantitative microstructure properties</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2021</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2021</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2021</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2020</td><td>Open Science Resources: New insights for researchers</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2020</td><td>medical image storage and processing infrastructure (XNAT)</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2020</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2020</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2020</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2019</td><td>Microscopic diffusion anisotropy imaging as potential biomarker for MS</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2019</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2019</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2019</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2018</td><td>Structural connectivity in patients with anti-NMDA receptor encephalitis</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2018</td><td>High order tractography models to obtain a more reliable structural connectivity</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2018</td><td>Quantitative MRI of the spinal cord</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2018</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2018</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                <tr><td>2018</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PUBLICATIONS -->
-    <section id="publications">
+    <section id="publications" class="bg-white-section">
         <div class="container">
             <h2 class="section-title">Selected Publications</h2>
-            <p class="text-muted mb-4">Showing recent highlights. See full list on <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Martinez-Heras+E" target="_blank">PubMed</a>.</p>
+            <p class="text-muted mb-4">Showing highlights as First, Co-First, or Senior Author. See full list on <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Martinez-Heras+E" target="_blank">PubMed</a>.</p>
 
-            <!-- Highlighting recent 2025-2024 works from PDF -->
+            <!-- Pub 1: Calvi A (2025) -->
             <div class="publication-item">
-                <h5 class="fw-bold text-primary">Advances in MRI optic nerve segmentation</h5>
-                <p class="mb-1 text-muted small">Xena-Bosch C, ..., <strong>Martinez-Heras E</strong>, et al.</p>
-                <p class="mb-0 fst-italic small">Multiple Sclerosis and Related Disorders (2025)</p>
+                <span class="badge bg-warning text-dark mb-2">Joint Senior Author</span>
+                <h5 class="fw-bold text-primary">Diffusivity anisotropy signature of the slowly expanding lesions predicts progression independent of relapse activity in multiple sclerosis</h5>
+                <p class="mb-1 text-muted small">Calvi A, Vivó Pascual F, ..., <strong>Martinez-Heras E</strong>, Llufriu S.</p>
+                <p class="mb-0 fst-italic small">J Neurol Neurosurg Psychiatry (2025) | DOI: 10.1136/jnnp-2025-335884</p>
             </div>
 
+            <!-- Pub 2: Vivó F (2024) -->
             <div class="publication-item">
-                <h5 class="fw-bold text-primary">Efficacy of cognitive rehabilitation in cognition and brain networks</h5>
-                <p class="mb-1 text-muted small">Lopez-Soley E, <strong>Martinez-Heras E</strong>, Vivo F, et al.</p>
-                <p class="mb-0 fst-italic small">Neuroimage-Clinical (2025)</p>
+                <span class="badge bg-warning text-dark mb-2">Joint Senior Author</span>
+                <h5 class="fw-bold text-primary">Microscopic fractional anisotropy outperforms multiple sclerosis lesion assessment and clinical outcome associations over standard fractional anisotropy tensor</h5>
+                <p class="mb-1 text-muted small">Vivó F, Solana E, ..., <strong>Martinez-Heras E</strong>.</p>
+                <p class="mb-0 fst-italic small">Hum Brain Mapp (2024) | DOI: 10.1002/hbm.26706</p>
             </div>
 
+            <!-- Pub 3: Martinez-Heras E (2023) -->
             <div class="publication-item">
-                <h5 class="fw-bold text-primary">Artificial Intelligence and Multiple Sclerosis</h5>
-                <p class="mb-1 text-muted small">Amin M, <strong>Martinez-Heras E</strong>, Ontaneda D, Prados F.</p>
-                <p class="mb-0 fst-italic small">Current Neurology and Neuroscience Reports (2024)</p>
+                <span class="badge bg-success mb-2">First Author</span>
+                <h5 class="fw-bold text-primary">Diffusion-based structural connectivity patterns of multiple sclerosis phenotypes</h5>
+                <p class="mb-1 text-muted small"><strong>Martinez-Heras E</strong>, Solana E, Vivó F, ..., Llufriu S.</p>
+                <p class="mb-0 fst-italic small">J Neurol Neurosurg Psychiatry (2023) | DOI: 10.1136/jnnp-2023-331531</p>
             </div>
 
-             <div class="publication-item">
-                <h5 class="fw-bold text-primary">Microscopic fractional anisotropy outperforms multiple sclerosis lesion assessment</h5>
-                <p class="mb-1 text-muted small">Vivó F, Solana E, ..., <strong>Martinez-Heras E</strong> (Corresponding Author).</p>
-                <p class="mb-0 fst-italic small">Human Brain Mapping (2024)</p>
+            <!-- Pub 4: Casas-Roma J (2022) -->
+            <div class="publication-item">
+                <span class="badge bg-info text-dark mb-2">Co-First Author</span>
+                <h5 class="fw-bold text-primary">Applying multilayer analysis to morphological, structural, and functional brain networks to identify relevant dysfunction patterns</h5>
+                <p class="mb-1 text-muted small">Casas-Roma J, <strong>Martinez-Heras E</strong>, Solé-Ribalta A, ..., Prados F.</p>
+                <p class="mb-0 fst-italic small">Netw Neurosci (2022) | DOI: 10.1162/netn_a_00258</p>
+            </div>
+
+             <!-- Pub 5: Martinez-Heras E (2021) -->
+            <div class="publication-item">
+                <span class="badge bg-success mb-2">First Author</span>
+                <h5 class="fw-bold text-primary">Diffusion-Weighted Imaging: Recent Advances and Applications</h5>
+                <p class="mb-1 text-muted small"><strong>Martinez-Heras E</strong>, Grussu F, Prados F, Solana E, Llufriu S.</p>
+                <p class="mb-0 fst-italic small">Semin Ultrasound CT MR (2021) | DOI: 10.1053/j.sult.2021.07.006</p>
+            </div>
+
+             <!-- Pub 6: Solana E (2021) -->
+            <div class="publication-item">
+                <span class="badge bg-info text-dark mb-2">Co-First Author</span>
+                <h5 class="fw-bold text-primary">Regional grey matter microstructural changes and volume loss according to disease duration in multiple sclerosis patients</h5>
+                <p class="mb-1 text-muted small">Solana E, <strong>Martinez-Heras E</strong>, Montal V, ..., Llufriu S.</p>
+                <p class="mb-0 fst-italic small">Sci Rep (2021) | DOI: 10.1038/s41598-021-96132-x</p>
+            </div>
+
+             <!-- Pub 7: Martínez-Heras E (2020) -->
+            <div class="publication-item">
+                <span class="badge bg-success mb-2">First Author</span>
+                <h5 class="fw-bold text-primary">Characterization of multiple sclerosis lesions with distinct clinical correlates through quantitative diffusion MRI</h5>
+                <p class="mb-1 text-muted small"><strong>Martínez-Heras E</strong>, Solana E, Prados F, ..., Llufriu S.</p>
+                <p class="mb-0 fst-italic small">Neuroimage Clin (2020) | DOI: 10.1016/j.nicl.2020.102411</p>
             </div>
             
-            <!-- Link to full list -->
             <div class="mt-3 text-end">
                 <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Martinez-Heras+E" class="btn btn-sm btn-outline-primary">View All Publications &rarr;</a>
             </div>
