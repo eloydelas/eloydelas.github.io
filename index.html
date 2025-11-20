@@ -46,6 +46,31 @@
             color: #003366; 
             font-weight: 700; 
         }
+        
+        /* COLLAPSIBLE HEADERS styling */
+        .collapsible-header {
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+        .collapsible-header:hover {
+            color: #0056b3;
+        }
+        .collapsible-header::after {
+            content: '\f078'; /* FontAwesome chevron-down */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+            color: #aaa;
+        }
+        /* Rotate icon when open */
+        .collapsible-header[aria-expanded="true"]::after {
+            transform: rotate(180deg);
+        }
+
         .bg-white-section { background-color: #ffffff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
         
         /* TIMELINE & CARDS */
@@ -91,11 +116,11 @@
             box-shadow: 0 2px 2px -1px rgba(0,0,0,0.1);
         }
         .table td {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             vertical-align: middle;
         }
         
-        /* SCROLLABLE TABLE CONTAINER FOR TALKS */
+        /* SCROLLABLE TABLE CONTAINER */
         .table-scroll-container {
             max-height: 500px;
             overflow-y: auto;
@@ -127,7 +152,7 @@
     <!-- Navigation -->
     <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">Eloy Martinez-Heras</a>
+            <a class="navbar-brand fw-bold text-primary" href="#">Eloy Martínez</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -135,9 +160,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <!-- Consolidated links for clarity, or keep separate if preferred -->
+                    <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#workshops">Workshops</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#talks">Talks</a></li>
                     <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
                 </ul>
             </div>
@@ -210,9 +235,10 @@
                 <p class="small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> June 2018 – Present</p>
             </div>
             <div class="timeline-item">
-                <h5 class="fw-bold">Professor (Artificial Intelligence)</h5>
+                <h5 class="fw-bold">Adjunct Professor / Course Instructor</h5>
                 <p class="text-primary mb-1">Universitat Oberta de Catalunya (UOC)</p>
-                <p class="small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> 2025 (Master in Computer Engineering)</p>
+                <p class="small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> 2018 – Present</p>
+                <p class="small text-muted">Course Instructor and Tutor for Master programs in Data Science, Bioinformatics, and Computational Engineering.</p>
             </div>
             <div class="timeline-item">
                 <h5 class="fw-bold">Predoctoral Researcher</h5>
@@ -222,215 +248,500 @@
         </div>
     </section>
 
-    <!-- PROJECTS (Full Table) -->
-    <section id="projects" class="bg-light">
+    <!-- TEACHING COLLABORATIONS (Collapsible) -->
+    <section id="teaching" class="bg-white-section">
         <div class="container">
-            <h2 class="section-title">R&D Projects</h2>
-            <div class="card shadow-sm">
-                <div class="card-body p-0">
-                    <div class="table-responsive">
-                        <table class="table table-hover mb-0">
-                            <thead class="table-light">
-                                <tr>
-                                    <th>Code</th>
-                                    <th>Project Name</th>
-                                    <th>Agency / Fund</th>
-                                    <th>Duration</th>
-                                    <th>Role</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="table-primary">
-                                    <td><strong>PI24/00567</strong></td>
-                                    <td>MS Disability Accumulation: combined models of damage, repair and reserve</td>
-                                    <td>Instituto de Salud Carlos III</td>
-                                    <td>2025 - 2027</td>
-                                    <td>Team Member</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>2021-SGR-01325</strong></td>
-                                    <td>Grup d'Imatge Avançada en Malalties Neuroimmunològiques (ImaginEM)</td>
-                                    <td>AGAUR</td>
-                                    <td>2022 - 2024</td>
-                                    <td>Team Member</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>PI21/01189</strong></td>
-                                    <td>Neuroimaging multi-modal approach (daMoS)</td>
-                                    <td>Instituto Carlos III (IDIBAPS)</td>
-                                    <td>2022 - 2024</td>
-                                    <td>Team Member</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>TV3_Ictus_17</strong></td>
-                                    <td>Blood brain barrier disruption after subarachnoid hemorrhage</td>
-                                    <td>Fundació La Marató de TV3</td>
-                                    <td>2018 - 2023</td>
-                                    <td>Team Member</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>PI18/01030</strong></td>
-                                    <td>Rehabilitación cognitiva y plasticidad cerebral en la esclerosis múltiple</td>
-                                    <td>Instituto de Salud Carlos III</td>
-                                    <td>2019 - 2021</td>
-                                    <td>Team Member</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>RD16/0015/0002</strong></td>
-                                    <td>Redes temáticas de investigación (REEM)</td>
-                                    <td>IDIBAPS</td>
-                                    <td>2017 - 2021</td>
-                                    <td>Team Member</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>PI15/00587</strong></td>
-                                    <td>Biomarcadores de RM avanzada en esclerosis múltiple</td>
-                                    <td>Instituto de Salud Carlos III</td>
-                                    <td>2016 - 2020</td>
-                                    <td>Team Member</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>CEIC 7965</strong></td>
-                                    <td>Non-conventional MRI as predictive marker of treatment response</td>
-                                    <td>TEVA Spain SLU</td>
-                                    <td>2013 - 2018</td>
-                                    <td>Team Member</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>RD12/0032/0002</strong></td>
-                                    <td>Red Española de Esclerosis Múltiple (REEM)</td>
-                                    <td>Ministerio de Sanidad</td>
-                                    <td>2013 - 2016</td>
-                                    <td>Team Member</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>-</strong></td>
-                                    <td>Rehabilitación cognitiva y plasticidad cerebral en la Esclerosis Múltiple</td>
-                                    <td>Fundación Merck Salud</td>
-                                    <td>2017 - 2021</td>
-                                    <td>Team Member</td>
-                                </tr>
-                            </tbody>
-                        </table>
+            <!-- Header with toggle logic -->
+            <h2 class="section-title collapsible-header" data-bs-toggle="collapse" data-bs-target="#teachingCollapse" aria-expanded="false" aria-controls="teachingCollapse">
+                Teaching Collaborations (UOC)
+            </h2>
+            
+            <!-- Collapsible Content -->
+            <div class="collapse" id="teachingCollapse">
+                <p class="text-muted mb-4">Collaborations as <strong>Course Instructor</strong> and <strong>Tutor</strong> for various University Master's Degree programs.</p>
+                <div class="card shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="table-scroll-container">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 150px;">Semester</th>
+                                        <th>Role</th>
+                                        <th>Subject / Activity</th>
+                                        <th>Official Program</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- 2024/2025 -->
+                                    <tr><td>2024/25 Sem 2</td><td><strong>Course Instructor</strong></td><td>Artificial Intelligence</td><td>Master in Computational & Math. Engineering</td></tr>
+                                    <tr><td>2024/25 Sem 2</td><td><strong>Course Instructor</strong></td><td>TFM - Area 3</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2024/25 Sem 2</td><td><strong>Course Instructor</strong></td><td>Statistical Bioinformatics & ML</td><td>Master in Bioinformatics & Biostatistics</td></tr>
+                                    <tr><td>2024/25 Sem 2</td><td><strong>Tutor</strong></td><td>Master's Tutoring</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2024/25 Sem 1</td><td><strong>Course Instructor</strong></td><td>TFM - Area 3</td><td>Master in Data Science</td></tr>
+
+                                    <!-- 2023/2024 -->
+                                    <tr><td>2023/24 Sem 2</td><td><strong>Course Instructor</strong></td><td>TFM - Area 3</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2023/24 Sem 2</td><td><strong>Tutor</strong></td><td>Master's Tutoring</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2023/24 Sem 1</td><td><strong>Course Instructor</strong></td><td>TFM - Area 3</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2023/24 Sem 1</td><td><strong>Course Instructor</strong></td><td>Statistical Bioinformatics & ML</td><td>Master in Bioinformatics & Biostatistics</td></tr>
+                                    <tr><td>2023/24 Sem 1</td><td><strong>Tutor</strong></td><td>Master's Tutoring</td><td>Master in Data Science</td></tr>
+
+                                    <!-- 2022/2023 -->
+                                    <tr><td>2022/23 Sem 2</td><td><strong>Course Instructor</strong></td><td>TFM - Area 3</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2022/23 Sem 2</td><td><strong>Tutor</strong></td><td>Master's Tutoring</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2022/23 Sem 1</td><td><strong>Course Instructor</strong></td><td>TFM - Area 3</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2022/23 Sem 1</td><td><strong>Tutor</strong></td><td>Master's Tutoring</td><td>Master in Data Science</td></tr>
+
+                                    <!-- 2021/2022 -->
+                                    <tr><td>2021/22 Sem 2</td><td><strong>Course Instructor</strong></td><td>TFM - Area 3</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2021/22 Sem 2</td><td><strong>Tutor</strong></td><td>Master's Tutoring</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2021/22 Sem 1</td><td><strong>Course Instructor</strong></td><td>TFM - Area 3</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2021/22 Sem 1</td><td><strong>Tutor</strong></td><td>Master's Tutoring</td><td>Master in Data Science</td></tr>
+
+                                    <!-- Older -->
+                                    <tr><td>2020/21 Sem 2</td><td><strong>Course Instructor</strong></td><td>TFM - Area 3</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2019/20 Sem 2</td><td><strong>Course Instructor</strong></td><td>TFM - Area 3</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2019/20 Sem 1</td><td><strong>Course Instructor</strong></td><td>TFM - Area 3</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2018/19 Sem 2</td><td><strong>Course Instructor</strong></td><td>FMP - Data Mining & ML</td><td>Master in Data Science</td></tr>
+                                    <tr><td>2017/18 Sem 2</td><td><strong>Course Instructor</strong></td><td>Final Master's Degree Project</td><td>Master in Data Science</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WORKSHOPS -->
-    <section id="workshops" class="bg-white-section">
+    <!-- ACADEMIC SUPERVISION (Collapsible) -->
+    <section id="supervision" class="bg-light">
         <div class="container">
-            <h2 class="section-title">Workshops & Educational Series</h2>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <ul class="list-group workshop-list list-group-flush">
-                        <li class="list-group-item">
-                            <span class="workshop-date">Oct 2019</span>
-                            <strong>36th Annual Scientific Meeting of the ESMRMB</strong> (Rotterdam). Scientific Sessions A-1330.
-                        </li>
-                        <li class="list-group-item">
-                            <span class="workshop-date">June 2019</span>
-                            <strong>Annual Meeting of the Organization for Human Brain Mapping</strong> (Rome, Italy).
-                        </li>
-                        <li class="list-group-item">
-                            <span class="workshop-date">Jan 2018</span>
-                            <strong>Spinal Cord MRI workshop@UCL</strong> (London, UK).
-                        </li>
-                        <li class="list-group-item">
-                            <span class="workshop-date">Oct 2017</span>
-                            <strong>School on brain connectomics</strong> (Verona, Italy).
-                        </li>
-                        <li class="list-group-item">
-                            <span class="workshop-date">June 2016</span>
-                            <strong>ESMRMB course of clinical fMRI & DTI</strong> (Barcelona, Spain).
-                        </li>
-                        <li class="list-group-item">
-                            <span class="workshop-date">Oct 2015</span>
-                            <strong>31st Congress of ECTRIMS</strong> (Barcelona, Spain).
-                        </li>
-                        <li class="list-group-item">
-                            <span class="workshop-date">Oct 2013</span>
-                            <strong>ISMRM Workshop on Diffusion</strong> (Podstrana, Croatia).
-                        </li>
-                        <li class="list-group-item">
-                            <span class="workshop-date">June 2011</span>
-                            <strong>Annual Meeting of the Organization for Human Brain Mapping</strong> (Québec City, Canada).
-                        </li>
-                        <li class="list-group-item">
-                            <span class="workshop-date">Sept 2010</span>
-                            <strong>2nd National Course of SPM</strong> (Barcelona, Spain).
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- Header with toggle logic -->
+            <h2 class="section-title collapsible-header" data-bs-toggle="collapse" data-bs-target="#supervisionCollapse" aria-expanded="false" aria-controls="supervisionCollapse">
+                Academic Supervision (Master's Theses)
+            </h2>
+            
+            <!-- Collapsible Content -->
+            <div class="collapse" id="supervisionCollapse">
+                <p class="text-muted mb-4">Supervision of approved Final Master Projects (TFM) at Universitat Oberta de Catalunya (UOC) for the <strong>Data Science</strong> and <strong>Bioinformatics</strong> programs.</p>
+                <div class="card shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="table-scroll-container">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 120px;">Semester</th>
+                                        <th>Project Title</th>
+                                        <th style="width: 100px;">Grade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- 2025 -->
+                                    <tr>
+                                        <td><strong>2024/25 S2</strong></td>
+                                        <td>Lesion Segmentation in Multiple Sclerosis: A Deep Learning Approach for Accurate Detection</td>
+                                        <td><span class="badge bg-success">9.5</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2024/25 S2</strong></td>
+                                        <td>Multimodal brain network integration using graph theoretical analysis in people with multiple sclerosis</td>
+                                        <td><span class="badge bg-success">9.4</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2024/25 S2</strong></td>
+                                        <td>Aplicación de modelos de clasificación mediante técnicas avanzadas de ML para el análisis de redes cerebrales en EM</td>
+                                        <td><span class="badge bg-primary">7.4</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2024/25 S1</strong></td>
+                                        <td>Study of transcriptomics-defined cellular populations in the mouse dentate gyrus and its alteration in epilepsy</td>
+                                        <td><span class="badge bg-success">9.6</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2024/25 S1</strong></td>
+                                        <td>Anàlisi de xarxes cerebrals multimodals mitjançant la teoria de grafs en pacients amb Esclerosi Múltiple</td>
+                                        <td><span class="badge bg-primary">7.4</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2024/25 S1</strong></td>
+                                        <td>Detección de Lesiones Nuevas o Cambiantes en Esclerosis Múltiple</td>
+                                        <td><span class="badge bg-secondary">6.3</span></td>
+                                    </tr>
+                                    
+                                    <!-- 2024 -->
+                                    <tr>
+                                        <td><strong>2023/24 S2</strong></td>
+                                        <td>A Classification Model Approach to Brain Imaging: Understanding Fear Conditioning</td>
+                                        <td><span class="badge bg-success">9.0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2023/24 S2</strong></td>
+                                        <td>Synap-Net: Synchronized Neural Analysis of Stroke in FLAIR images through nnU-NET</td>
+                                        <td><span class="badge bg-success">8.8</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2023/24 S2</strong></td>
+                                        <td>Detecció automàtica de lesions cròniques actives (o d'expansió lenta) mitjançant ressonància magnètica convencional</td>
+                                        <td><span class="badge bg-success">8.1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2023/24 S1</strong></td>
+                                        <td>From brain disconnection to atrophy: Assessing multi-modal brain network connectivity measures in MS</td>
+                                        <td><span class="badge bg-success">9.4</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2023/24 S1</strong></td>
+                                        <td>Longitudinal MRI analysis for Slowly Expanding Lesions (SELs) characterization through nnU-NET</td>
+                                        <td><span class="badge bg-success">9.3</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2023/24 S1</strong></td>
+                                        <td>Characterisation of structural connectivity in relation to cognitive profiles in patients with multiple sclerosis</td>
+                                        <td><span class="badge bg-success">9.0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2023/24 S1</strong></td>
+                                        <td>Integració multimodal de connectivitat estructural i funcional cerebral en la detecció d’Esclerosis Múltiple</td>
+                                        <td><span class="badge bg-success">8.3</span></td>
+                                    </tr>
 
-    <!-- ORAL PRESENTATIONS -->
-    <section id="talks" class="bg-light">
-        <div class="container">
-            <h2 class="section-title">Oral Presentations & Invited Talks</h2>
-            <div class="card shadow-sm">
-                <div class="card-body p-0">
-                    <div class="table-scroll-container">
-                        <table class="table table-hover mb-0">
-                            <thead class="table-light">
-                                <tr>
-                                    <th style="width: 100px;">Year</th>
-                                    <th>Presentation Title</th>
-                                    <th>Event / Location</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>2025</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2025</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2025</td><td>Therapeutic images: healing, visuality and trust</td><td>VisualTrust Congress, Barcelona</td></tr>
-                                <tr><td>2025</td><td>Workflow in neuroimaging research (RICORS)</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2024</td><td>Advanced Imaging in neuroimmunological diseases (KISTEP)</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2024</td><td>Deep Learning: Introducción y aplicación en la neuroimagen</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2024</td><td>Practical use of synthetic imaging (Uso práctico de la imagen sintética)</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2024</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2024</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2023</td><td>Adaptability of advanced MR imaging techniques to clinical research</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2023</td><td>Integration of automated MRI Image processing into XNAT platform</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2023</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2023</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2023</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2022</td><td>medical image storage and processing infrastructure (XNAT)</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2022</td><td>Deep Learning: Introducción y aplicación en la neuroimagen</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2022</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2022</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2022</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2021</td><td>Advanced diffusion-weighted imaging: Quantitative microstructure properties</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2021</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2021</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2021</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2020</td><td>Open Science Resources: New insights for researchers</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2020</td><td>medical image storage and processing infrastructure (XNAT)</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2020</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2020</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2020</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2019</td><td>Microscopic diffusion anisotropy imaging as potential biomarker for MS</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2019</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2019</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2019</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2018</td><td>Structural connectivity in patients with anti-NMDA receptor encephalitis</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2018</td><td>High order tractography models to obtain a more reliable structural connectivity</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2018</td><td>Quantitative MRI of the spinal cord</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2018</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2018</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
-                                <tr><td>2018</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
-                            </tbody>
-                        </table>
+                                    <!-- 2023 -->
+                                    <tr>
+                                        <td><strong>2022/23 S2</strong></td>
+                                        <td>Automated Identification of Initial and Progressing MS Indicators through multiclass detection of Baseline and New Lesions</td>
+                                        <td><span class="badge bg-success">9.7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2022/23 S2</strong></td>
+                                        <td>Magnetic Resonance Imaging (MRI) image translation with Cycle-consistency GAN</td>
+                                        <td><span class="badge bg-success">9.7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2022/23 S2</strong></td>
+                                        <td>Multilayer approach to diagnose and classify Multiple Sclerosis phenotypes using graph theory measures</td>
+                                        <td><span class="badge bg-success">9.4</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2022/23 S2</strong></td>
+                                        <td>Estudio de la conectividad estructural, morfológica y funcional del cerebro en pacientes con esclerosis múltiple</td>
+                                        <td><span class="badge bg-success">8.2</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2022/23 S1</strong></td>
+                                        <td>Detección de nuevas lesiones en Esclerosis Múltiple en estudios longitudinales de RM</td>
+                                        <td><span class="badge bg-success">9.8</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2022/23 S1</strong></td>
+                                        <td>Detección de lesiones nuevas o cambiantes en EM</td>
+                                        <td><span class="badge bg-success">9.8</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2022/23 S1</strong></td>
+                                        <td>Detección de Lesiones de Esclerosis Múltiple (EM) a través de Deep Learning</td>
+                                        <td><span class="badge bg-primary">7.5</span></td>
+                                    </tr>
+
+                                    <!-- 2022 and older -->
+                                    <tr>
+                                        <td><strong>2021/22 S2</strong></td>
+                                        <td>Detección de lesiones nuevas o cambiantes en EM</td>
+                                        <td><span class="badge bg-success">8.7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2020/21 S2</strong></td>
+                                        <td>Detección de lesiones nuevas o cambiantes en EM</td>
+                                        <td><span class="badge bg-success">8.8</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2020/21 S2</strong></td>
+                                        <td>Detección de lesiones nuevas o cambiantes en EM</td>
+                                        <td><span class="badge bg-success">8.3</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2019/20 S2</strong></td>
+                                        <td>Segmentación automática de lesiones en EM</td>
+                                        <td><span class="badge bg-success">9.3</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2019/20 S2</strong></td>
+                                        <td>Segmentación automática de lesiones en EM</td>
+                                        <td><span class="badge bg-primary">7.3</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2019/20 S1</strong></td>
+                                        <td>Caracterización del colapso de la red cerebral en pacientes con esclerosis múltiple mediante análisis de grafos</td>
+                                        <td><span class="badge bg-success">9.7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2019/20 S1</strong></td>
+                                        <td>Segmentación de Lesiones del Cerebro en la Esclerosis Múltiple con Redes Neuronales Convolucionales</td>
+                                        <td><span class="badge bg-primary">7.5</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2019/20 S1</strong></td>
+                                        <td>Optimización de la arquitectura de red neuronal convolucional (FLEXCONN)</td>
+                                        <td><span class="badge bg-primary">7.2</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2018/19 S2</strong></td>
+                                        <td>ML-7. Segmentación automática de lesiones en EM</td>
+                                        <td><span class="badge bg-success">9.7</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2018/19 S2</strong></td>
+                                        <td>Estudio de la red cerebral mediante grafos</td>
+                                        <td><span class="badge bg-primary">7.9</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2018/19 S2</strong></td>
+                                        <td>Estudio de la red cerebral mediante grafos</td>
+                                        <td><span class="badge bg-primary">7.1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2017/18 S2</strong></td>
+                                        <td>Aplicación de algoritmos de aprendizaje automático para predecir la disfunción cognitiva en pacientes de EM</td>
+                                        <td><span class="badge bg-success">9.0</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PUBLICATIONS -->
-    <section id="publications" class="bg-white-section">
+    <!-- PROJECTS (Collapsible) -->
+    <section id="projects" class="bg-white-section">
+        <div class="container">
+            <!-- Header with toggle logic -->
+            <h2 class="section-title collapsible-header" data-bs-toggle="collapse" data-bs-target="#projectsCollapse" aria-expanded="false" aria-controls="projectsCollapse">
+                R&D Projects
+            </h2>
+            
+            <!-- Collapsible Content -->
+            <div class="collapse" id="projectsCollapse">
+                <div class="card shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Code</th>
+                                        <th>Project Name</th>
+                                        <th>Agency / Fund</th>
+                                        <th>Duration</th>
+                                        <th>Role</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-primary">
+                                        <td><strong>PI24/00567</strong></td>
+                                        <td>MS Disability Accumulation: combined models of damage, repair and reserve</td>
+                                        <td>Instituto de Salud Carlos III</td>
+                                        <td>2025 - 2027</td>
+                                        <td>Team Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>2021-SGR-01325</strong></td>
+                                        <td>Grup d'Imatge Avançada en Malalties Neuroimmunològiques (ImaginEM)</td>
+                                        <td>AGAUR</td>
+                                        <td>2022 - 2024</td>
+                                        <td>Team Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>PI21/01189</strong></td>
+                                        <td>Neuroimaging multi-modal approach (daMoS)</td>
+                                        <td>Instituto Carlos III (IDIBAPS)</td>
+                                        <td>2022 - 2024</td>
+                                        <td>Team Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>TV3_Ictus_17</strong></td>
+                                        <td>Blood brain barrier disruption after subarachnoid hemorrhage</td>
+                                        <td>Fundació La Marató de TV3</td>
+                                        <td>2018 - 2023</td>
+                                        <td>Team Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>PI18/01030</strong></td>
+                                        <td>Rehabilitación cognitiva y plasticidad cerebral en la esclerosis múltiple</td>
+                                        <td>Instituto de Salud Carlos III</td>
+                                        <td>2019 - 2021</td>
+                                        <td>Team Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>RD16/0015/0002</strong></td>
+                                        <td>Redes temáticas de investigación (REEM)</td>
+                                        <td>IDIBAPS</td>
+                                        <td>2017 - 2021</td>
+                                        <td>Team Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>PI15/00587</strong></td>
+                                        <td>Biomarcadores de RM avanzada en esclerosis múltiple</td>
+                                        <td>Instituto de Salud Carlos III</td>
+                                        <td>2016 - 2020</td>
+                                        <td>Team Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>CEIC 7965</strong></td>
+                                        <td>Non-conventional MRI as predictive marker of treatment response</td>
+                                        <td>TEVA Spain SLU</td>
+                                        <td>2013 - 2018</td>
+                                        <td>Team Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>RD12/0032/0002</strong></td>
+                                        <td>Red Española de Esclerosis Múltiple (REEM)</td>
+                                        <td>Ministerio de Sanidad</td>
+                                        <td>2013 - 2016</td>
+                                        <td>Team Member</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>-</strong></td>
+                                        <td>Rehabilitación cognitiva y plasticidad cerebral en la Esclerosis Múltiple</td>
+                                        <td>Fundación Merck Salud</td>
+                                        <td>2017 - 2021</td>
+                                        <td>Team Member</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKSHOPS (Collapsible) -->
+    <section id="workshops" class="bg-light">
+        <div class="container">
+            <!-- Header with toggle logic -->
+            <h2 class="section-title collapsible-header" data-bs-toggle="collapse" data-bs-target="#workshopsCollapse" aria-expanded="false" aria-controls="workshopsCollapse">
+                Workshops & Educational Series
+            </h2>
+            
+            <!-- Collapsible Content -->
+            <div class="collapse" id="workshopsCollapse">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <ul class="list-group workshop-list list-group-flush bg-transparent">
+                            <li class="list-group-item bg-transparent">
+                                <span class="workshop-date">Oct 2019</span>
+                                <strong>36th Annual Scientific Meeting of the ESMRMB</strong> (Rotterdam). Scientific Sessions A-1330.
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <span class="workshop-date">June 2019</span>
+                                <strong>Annual Meeting of the Organization for Human Brain Mapping</strong> (Rome, Italy).
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <span class="workshop-date">Jan 2018</span>
+                                <strong>Spinal Cord MRI workshop@UCL</strong> (London, UK).
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <span class="workshop-date">Oct 2017</span>
+                                <strong>School on brain connectomics</strong> (Verona, Italy).
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <span class="workshop-date">June 2016</span>
+                                <strong>ESMRMB course of clinical fMRI & DTI</strong> (Barcelona, Spain).
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <span class="workshop-date">Oct 2015</span>
+                                <strong>31st Congress of ECTRIMS</strong> (Barcelona, Spain).
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <span class="workshop-date">Oct 2013</span>
+                                <strong>ISMRM Workshop on Diffusion</strong> (Podstrana, Croatia).
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <span class="workshop-date">June 2011</span>
+                                <strong>Annual Meeting of the Organization for Human Brain Mapping</strong> (Québec City, Canada).
+                            </li>
+                            <li class="list-group-item bg-transparent">
+                                <span class="workshop-date">Sept 2010</span>
+                                <strong>2nd National Course of SPM</strong> (Barcelona, Spain).
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORAL PRESENTATIONS (Collapsible) -->
+    <section id="talks" class="bg-white-section">
+        <div class="container">
+            <!-- Header with toggle logic -->
+            <h2 class="section-title collapsible-header" data-bs-toggle="collapse" data-bs-target="#talksCollapse" aria-expanded="false" aria-controls="talksCollapse">
+                Oral Presentations & Invited Talks
+            </h2>
+            
+            <!-- Collapsible Content -->
+            <div class="collapse" id="talksCollapse">
+                <div class="card shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="table-scroll-container">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 100px;">Year</th>
+                                        <th>Presentation Title</th>
+                                        <th>Event / Location</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>2025</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2025</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2025</td><td>Therapeutic images: healing, visuality and trust</td><td>VisualTrust Congress, Barcelona</td></tr>
+                                    <tr><td>2025</td><td>Workflow in neuroimaging research (RICORS)</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2024</td><td>Advanced Imaging in neuroimmunological diseases (KISTEP)</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2024</td><td>Deep Learning: Introducción y aplicación en la neuroimagen</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2024</td><td>Practical use of synthetic imaging (Uso práctico de la imagen sintética)</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2024</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2024</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2023</td><td>Adaptability of advanced MR imaging techniques to clinical research</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2023</td><td>Integration of automated MRI Image processing into XNAT platform</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2023</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2023</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2023</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2022</td><td>medical image storage and processing infrastructure (XNAT)</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2022</td><td>Deep Learning: Introducción y aplicación en la neuroimagen</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2022</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2022</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2022</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2021</td><td>Advanced diffusion-weighted imaging: Quantitative microstructure properties</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2021</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2021</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2021</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2020</td><td>Open Science Resources: New insights for researchers</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2020</td><td>medical image storage and processing infrastructure (XNAT)</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2020</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2020</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2020</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2019</td><td>Microscopic diffusion anisotropy imaging as potential biomarker for MS</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2019</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2019</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2019</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2018</td><td>Structural connectivity in patients with anti-NMDA receptor encephalitis</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2018</td><td>High order tractography models to obtain a more reliable structural connectivity</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2018</td><td>Quantitative MRI of the spinal cord</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2018</td><td>How quantitative images are processed: obtaining values of cerebral and spinal atrophy</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2018</td><td>What advanced magnetic resonance imaging techniques are</td><td>Internal/Hospital Clínic</td></tr>
+                                    <tr><td>2018</td><td>Deep learning: introduction and application in neuroimaging</td><td>Internal/Hospital Clínic</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS (Always Visible) -->
+    <section id="publications" class="bg-light">
         <div class="container">
             <h2 class="section-title">Selected Publications</h2>
             <p class="text-muted mb-4">Showing highlights as First, Co-First, or Senior Author. See full list on <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Martinez-Heras+E" target="_blank">PubMed</a>.</p>
