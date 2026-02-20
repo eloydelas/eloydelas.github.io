@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Eloy Martínez de las Heras - Postdoctoral Researcher in Computational Neuroimaging & Data Science">
+    <meta name="description" content="Eloy Martínez de las Heras - Senior Biomedical Engineer in Computational Neuroimaging">
     <meta name="author" content="Eloy Martínez de las Heras">
     <title>Eloy Martínez de las Heras | Curriculum Vitae</title>
     
@@ -16,11 +16,13 @@
 
     <!-- Custom Styles -->
     <style>
+        /* GLOBAL STYLES */
         body { 
             font-family: 'Roboto', sans-serif; 
             color: #333; 
             background-color: #f8f9fa; 
             line-height: 1.6; 
+            position: relative;
         }
         
         /* HERO SECTION */
@@ -29,12 +31,18 @@
             color: white; 
             padding: 80px 0; 
         }
-        .profile-img { 
+        .profile-img-container {
             width: 180px; 
-            height: 180px; 
+            height: 180px;
+            margin: 0 auto;
+        }
+        .profile-img { 
+            width: 100%; 
+            height: 100%; 
             object-fit: cover; 
             border: 5px solid rgba(255,255,255,0.3); 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border-radius: 50%;
         }
         
         /* SECTIONS */
@@ -47,7 +55,7 @@
             font-weight: 700; 
         }
         
-        /* COLLAPSIBLE HEADERS styling */
+        /* COLLAPSIBLE HEADERS */
         .collapsible-header {
             cursor: pointer;
             position: relative;
@@ -57,8 +65,8 @@
             color: #0056b3;
         }
         .collapsible-header::after {
-            content: '\f078'; /* FontAwesome chevron-down */
-            font-family: 'Font Awesome 5 Free';
+            content: '\f078'; /* chevron-down */
+            font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute;
             right: 0;
@@ -66,14 +74,36 @@
             transition: transform 0.3s;
             color: #aaa;
         }
-        /* Rotate icon when open */
         .collapsible-header[aria-expanded="true"]::after {
             transform: rotate(180deg);
         }
 
-        .bg-white-section { background-color: #ffffff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .bg-white-section { 
+            background-color: #ffffff; 
+            border-top: 1px solid #eee; 
+            border-bottom: 1px solid #eee; 
+        }
         
-        /* TIMELINE & CARDS */
+        /* CARDS */
+        .card { 
+            border: none; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+            transition: transform 0.2s;
+            height: 100%;
+        }
+        .card:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+        }
+
+        .badge-custom { 
+            background-color: #e3f2fd; 
+            color: #0056b3; 
+            font-weight: 500;
+            padding: 8px 12px; 
+        }
+
+        /* TIMELINE */
         .timeline-item {
             border-left: 2px solid #e9ecef;
             padding-left: 20px;
@@ -90,8 +120,6 @@
             left: -7px;
             top: 5px;
         }
-        .card { border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .badge-custom { background-color: #e3f2fd; color: #0056b3; padding: 8px 12px; }
 
         /* PUBLICATIONS */
         .publication-item { 
@@ -99,52 +127,38 @@
             border-left: 4px solid #0056b3; 
             padding: 20px; 
             margin-bottom: 20px; 
+            border-radius: 0 8px 8px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* TABLE STYLING */
-        .table-hover tbody tr:hover {
-            background-color: rgba(0, 86, 179, 0.05);
-        }
-        .table th {
-            background-color: #f1f1f1;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            box-shadow: 0 2px 2px -1px rgba(0,0,0,0.1);
-        }
-        .table td {
-            font-size: 0.9rem;
-            vertical-align: middle;
-        }
-        
-        /* SCROLLABLE TABLE CONTAINER */
+        /* TABLES */
         .table-scroll-container {
             max-height: 500px;
             overflow-y: auto;
             border: 1px solid #dee2e6;
         }
+        
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" tabindex="0">
 
-        /* WORKSHOPS LIST */
-        .workshop-list .list-group-item {
-            border: none;
-            border-bottom: 1px solid #eee;
-            padding: 15px 0;
-        }
-        .workshop-list .list-group-item:last-child {
-            border-bottom: none;
-        }
-        .workshop-date {
-            color: #0056b3;
-            font-weight: bold;
-            min-width: 150px;
-            display: inline-block;
+    <!-- Navigation -->
+    <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">Eloy Martínez</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+…            </div>
+        </div>
+    </section>.table-hover tbody tr:hover {
+            background-color: rgba(0, 86, 179, 0.05);
         }
 
         /* NAV */
         .nav-link.active { color: #0056b3 !important; font-weight: 700; }
+        
+        @media (max-width: 768px) {
+            .collapsible-header::after { right: 15px; }
+        }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar-example2" tabindex="0">
@@ -160,7 +174,6 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <!-- Consolidated links for clarity, or keep separate if preferred -->
                     <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
@@ -174,20 +187,24 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-3 text-center mb-4 mb-md-0">
-                    <!-- Ensure eloy_picture.jpg is in the same folder -->
-                    <img src="eloy_picture.jpg" alt="Eloy Martínez de las Heras" class="profile-img rounded-circle">
+                    <div class="profile-img-container">
+                        <img src="eloy_picture.jpg" alt="Eloy Martínez de las Heras" class="profile-img">
+                    </div>
                 </div>
                 <div class="col-md-9">
-                    <h1 class="display-5 fw-bold">Eloy Martínez de las Heras</h1>
-                    <h4 class="mb-3 opacity-75">Postdoctoral Researcher (R2A) | Computational Neuroimaging</h4>
+                    <!-- Adjusted font size to match the professional subtitle style -->
+                    <h2 class="fw-bold mb-2">Eloy Martínez de las Heras</h2>
+                    <h4 class="mb-3 opacity-75 fw-normal">Senior Biomedical Engineer | Computational Neuroimaging</h4>
                     <p class="lead mb-4 fs-6">
-                        Advanced Imaging in Neuroimmunological Diseases (ImaginEM) group at IDIBAPS & Hospital Clínic Barcelona. 
-                        Developing automated MRI analysis methods to identify biomarkers for Multiple Sclerosis.
+                        Neuroradiology Section, Radiology Department (IDI).<br> 
+                        <strong>Vall d'Hebron University Hospital</strong>. Barcelona, Spain.<br>
+                        Collaborating Professional at <strong>Hospital Clínic de Barcelona</strong>.
                     </p>
                     <div class="d-flex gap-2 justify-content-center justify-content-md-start flex-wrap">
-                        <a href="mailto:emartind@recerca.clinic.cat" class="btn btn-light"><i class="fas fa-envelope me-2"></i> Contact</a>
+                        <a href="mailto:eloymartinez.idi@gencat.cat" class="btn btn-light"><i class="fas fa-envelope me-2"></i> Contact</a>
                         <a href="https://orcid.org/0000-0001-9937-3162" target="_blank" class="btn btn-outline-light"><i class="fab fa-orcid me-2"></i> ORCID</a>
-                        <a href="https://www.clinicbarcelona.org/profesionales/eloy-martinez-heras" target="_blank" class="btn btn-outline-light"><i class="fas fa-hospital me-2"></i> Clinic Barcelona</a>
+                        <a href="https://vhir.vallhebron.com/en/research/neuroradiology" target="_blank" class="btn btn-outline-light"><i class="fas fa-microscope me-2"></i> VHIR Research</a>
+                        <a href="https://www.clinicbarcelona.org/profesionales/eloy-martinez-heras" target="_blank" class="btn btn-outline-light"><i class="fas fa-hospital me-2"></i> HCB Profile</a>
                     </div>
                 </div>
             </div>
@@ -201,24 +218,21 @@
                 <div class="col-lg-8">
                     <h2 class="section-title">Professional Summary</h2>
                     <p class="text-muted">
-                        I am a Postdoctoral Researcher dedicated to computational neuroimaging within the Advanced Imaging in Neuroimmunological Diseases (ImaginEM) group at the Hospital Clínic de Barcelona and the August Pi i Sunyer Biomedical Research Institute (IDIBAPS). My multidisciplinary academic background includes a BSc in Chemical Engineering (2007), an MSc in Biomedical Engineering (2009), and a PhD in Medicine and Translational Research (2017).
+                        I am a <strong>Senior Biomedical Engineer</strong> specializing in computational neuroimaging. Currently at Vall d'Hebron University Hospital, I bridge advanced engineering methodologies with clinical neuroradiology. 
                     </p>
                     <p class="text-muted">
-                        For over a decade, my research has been dedicated to developing and applying advanced MRI analysis methods aimed at identifying quantitative biomarkers for Multiple Sclerosis (MS) and other neuroimmunological diseases. My primary contributions focus on using advanced imaging to characterize subtle white and gray matter changes, conducting extensive network analysis to enhance the understanding of how MS disrupts brain connectivity, and applying machine learning tools to develop predictive models for disease progression and severity.
-                    </p>
-                    <p class="text-muted">
-                        A key technical achievement was leading the implementation of the XNAT platform for automated MRI processing, a development crucial for ensuring reproducible and scalable multi-center studies. I have demonstrated an extensive publication record, which includes more than 60 publications and an h-index of 20 (WoS), with numerous works published in leadership roles (first and corresponding author) in high-impact journals such as the Journal of Neurology, Neurosurgery & Psychiatry, Scientific Reports, NeuroImage: Clinical, and Network Neuroscience. Furthermore, I have been a Collaborating Professor in the Master's in Data Science at the Open University of Catalonia (UOC) since 2019, having most recently carried out a teaching role in the area of Artificial Intelligence during the last semester of 2024/2025.
+                        I maintain an active collaboration with <strong>Hospital Clínic de Barcelona</strong>, where I have previously served as a Postdoctoral Researcher at IDIBAPS. My work focuses on identifying automated MRI biomarkers for neuroimmunological diseases using machine learning and graph theory.
                     </p>
                 </div>
                 <div class="col-lg-4 mt-4 mt-lg-0">
                     <div class="card bg-light border-0 p-4">
-                        <h5 class="fw-bold mb-3">Key Competencies</h5>
+                        <h5 class="fw-bold mb-3">Core Expertise</h5>
                         <div class="d-flex flex-wrap gap-2">
-                            <span class="badge rounded-pill badge-custom">MRI Analysis</span>
+                            <span class="badge rounded-pill badge-custom">Medical Imaging</span>
                             <span class="badge rounded-pill badge-custom">Neuroimaging</span>
+                            <span class="badge rounded-pill badge-custom">Machine Learning</span>
+                            <span class="badge rounded-pill badge-custom">MRI Biomarkers</span>
                             <span class="badge rounded-pill badge-custom">Data Science</span>
-                            <span class="badge rounded-pill badge-custom">XNAT Implementation</span>
-                            <span class="badge rounded-pill badge-custom">Graph Theory</span>
                         </div>
                     </div>
                 </div>
@@ -231,20 +245,21 @@
         <div class="container">
             <h2 class="section-title">Experience</h2>
             <div class="timeline-item">
-                <h5 class="fw-bold">Postdoctoral Researcher (R2A)</h5>
+                <h5 class="fw-bold">Senior Biomedical Engineer</h5>
+                <p class="text-primary mb-1">Radiology Department (IDI) | Vall d'Hebron University Hospital</p>
+                <p class="small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> 2024 – Present</p>
+                <p class="small"><a href="https://vhir.vallhebron.com/en/research/neuroradiology" target="_blank" class="text-decoration-none">View VHIR Neuroradiology Research Group <i class="fas fa-external-link-alt ms-1"></i></a></p>
+            </div>
+            <div class="timeline-item">
+                <h5 class="fw-bold">Collaborating Researcher / Postdoc</h5>
                 <p class="text-primary mb-1">IDIBAPS - Hospital Clínic de Barcelona | ImaginEM Group</p>
                 <p class="small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> June 2018 – Present</p>
+                <p class="small"><a href="https://www.clinicbarcelona.org/profesionales/eloy-martinez-heras" target="_blank" class="text-decoration-none">View Official HCB Profile <i class="fas fa-external-link-alt ms-1"></i></a></p>
             </div>
             <div class="timeline-item">
                 <h5 class="fw-bold">Adjunct Professor / Course Instructor</h5>
                 <p class="text-primary mb-1">Universitat Oberta de Catalunya (UOC)</p>
                 <p class="small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> 2018 – Present</p>
-                <p class="small text-muted">Course Instructor and Tutor for Master programs in Data Science, Bioinformatics, and Computational Engineering.</p>
-            </div>
-            <div class="timeline-item">
-                <h5 class="fw-bold">Predoctoral Researcher</h5>
-                <p class="text-primary mb-1">Hospital Clínic de Barcelona</p>
-                <p class="small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> 2010 – 2017</p>
             </div>
         </div>
     </section>
