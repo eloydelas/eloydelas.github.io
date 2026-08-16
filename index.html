@@ -416,7 +416,7 @@
             <div class="section-header d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3">
                 <div>
                     <h2 class="section-title">Main Research Contributions</h2>
-                    <p class="section-desc mb-0">Highlighting contributions as <strong>First Author</strong>, <strong>Co-First Author</strong>, <strong>Senior Author</strong>, and <strong>Book Chapters</strong>. See full 60+ bibliography on <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Martinez-Heras+E" target="_blank" rel="noopener" class="fw-bold text-primary">PubMed</a> or <a href="https://orcid.org/0000-0001-9937-3162" target="_blank" rel="noopener" class="fw-bold text-primary">ORCID</a>.</p>
+                    <p class="section-desc mb-0">Highlighting contributions specifically as <strong>First Author</strong>, <strong>Co-First Author (*)</strong>, <strong>Senior Author</strong>, <strong>Corresponding Author (&#x2709;)</strong>, and <strong>Book Chapters</strong>. See full 60+ bibliography on <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Martinez-Heras+E" target="_blank" rel="noopener" class="fw-bold text-primary">PubMed</a> or <a href="https://orcid.org/0000-0001-9937-3162" target="_blank" rel="noopener" class="fw-bold text-primary">ORCID</a>.</p>
                 </div>
                 <div>
                     <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Martinez-Heras+E" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary fw-bold">
@@ -427,10 +427,11 @@
 
             <!-- Filter Buttons -->
             <div class="pub-filter-container">
-                <button class="btn-filter active" data-filter="all">All Contributions (23)</button>
+                <button class="btn-filter active" data-filter="all">All Highlights (14)</button>
                 <button class="btn-filter" data-filter="first"><i class="fa-solid fa-user-check text-success me-1"></i> First Author</button>
+                <button class="btn-filter" data-filter="cofirst"><i class="fa-solid fa-users text-info me-1"></i> Co-First Author (*)</button>
                 <button class="btn-filter" data-filter="senior"><i class="fa-solid fa-crown text-warning me-1"></i> Senior & Joint Senior</button>
-                <button class="btn-filter" data-filter="cofirst"><i class="fa-solid fa-users text-info me-1"></i> Co-First & Core Methodological</button>
+                <button class="btn-filter" data-filter="corresp"><i class="fa-solid fa-envelope text-danger me-1"></i> Corresponding Author</button>
                 <button class="btn-filter" data-filter="chapter"><i class="fa-solid fa-book-open text-primary me-1"></i> Book Chapters & Reviews</button>
             </div>
 
@@ -452,14 +453,17 @@
                     </p>
                 </div>
 
-                <!-- 2. Martinez-Heras E (2026 Brain Comms) -->
-                <div class="publication-card" data-category="first">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-first"><i class="fas fa-user-check me-1"></i> First Author</span>
+                <!-- 2. Martinez-Heras E*, Lopez-Soley E* (2026 Brain Comms) -->
+                <div class="publication-card" data-category="first cofirst">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-1">
+                        <div>
+                            <span class="publication-badge badge-first"><i class="fa-solid fa-user-check me-1"></i> First Author</span>
+                            <span class="publication-badge badge-cofirst"><i class="fa-solid fa-users me-1"></i> Co-First Author (*)</span>
+                        </div>
                         <span class="badge bg-light text-secondary border">2026</span>
                     </div>
                     <h4 class="pub-title">Cognitive outcomes in multiple sclerosis are shaped by divergent functional connectivity trajectories</h4>
-                    <p class="pub-authors"><strong>Martinez-Heras E</strong>, Lopez-Soley E, Cabras C, Vivó F, Calvi A, ..., Llufriu S.</p>
+                    <p class="pub-authors"><strong>Martinez-Heras E*</strong>, Lopez-Soley E*, Cabras C, Vivó F, Calvi A, ..., Llufriu S.</p>
                     <p class="pub-meta mb-0">
                         <em>Brain Communications</em> (2026) 8(1):fcaf489 &middot; 
                         <a href="https://doi.org/10.1093/braincomms/fcaf489" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1093/braincomms/fcaf489</a> &middot;
@@ -470,11 +474,11 @@
                 <!-- 3. Calvi A (2025/2026 JNNP) -->
                 <div class="publication-card" data-category="senior">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-senior"><i class="fas fa-crown me-1"></i> Joint Senior Author</span>
+                        <span class="publication-badge badge-senior"><i class="fa-solid fa-crown me-1"></i> Joint Senior Author (*)</span>
                         <span class="badge bg-light text-secondary border">2025-2026</span>
                     </div>
                     <h4 class="pub-title">Diffusivity anisotropy signature of slowly expanding lesions predicts progression independent of relapse activity in multiple sclerosis</h4>
-                    <p class="pub-authors">Calvi A, Vivó Pascual F, Solana E, Lopez-Soley E, ..., <strong>Martinez-Heras E</strong>, Llufriu S.</p>
+                    <p class="pub-authors">Calvi A, Vivó Pascual F, Solana E, Lopez-Soley E, ..., <strong>Martinez-Heras E*</strong>, Llufriu S*.</p>
                     <p class="pub-meta mb-0">
                         <em>Journal of Neurology, Neurosurgery & Psychiatry (JNNP)</em> (2025) 97(5):405-412 &middot; 
                         <a href="https://doi.org/10.1136/jnnp-2025-335884" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1136/jnnp-2025-335884</a> &middot;
@@ -482,74 +486,17 @@
                     </p>
                 </div>
 
-                <!-- 4. Lozano-Bagen T (2025 Health Inf Sci Syst) -->
-                <div class="publication-card" data-category="cofirst">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> Methodological Lead / Co-Author</span>
-                        <span class="badge bg-light text-secondary border">2025</span>
-                    </div>
-                    <h4 class="pub-title">Evaluating topological and graph-theoretical approaches to extract complex multimodal brain connectivity patterns in multiple sclerosis</h4>
-                    <p class="pub-authors">Lozano-Bagén T, <strong>Martinez-Heras E</strong>, Pontillo G, Solana E, Lopez-Soley E, ..., Prados F.</p>
-                    <p class="pub-meta mb-0">
-                        <em>Health Information Science and Systems</em> (2025) 13(1):68 &middot; 
-                        <a href="https://doi.org/10.1007/s13755-025-00386-y" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1007/s13755-025-00386-y</a> &middot;
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/41122298/" target="_blank" rel="noopener" class="text-secondary small ms-1">PMID: 41122298</a>
-                    </p>
-                </div>
-
-                <!-- 5. Xena-Bosch C (2025 Mult Scler Relat Disord) -->
-                <div class="publication-card" data-category="senior chapter">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-senior"><i class="fas fa-crown me-1"></i> Joint Senior Author &middot; Review</span>
-                        <span class="badge bg-light text-secondary border">2025</span>
-                    </div>
-                    <h4 class="pub-title">Advances in MRI optic nerve segmentation</h4>
-                    <p class="pub-authors">Xena-Bosch C, Kodali S, Sahi N, Chard D, Llufriu S, Toosy AT, <strong>Martinez-Heras E</strong>, Prados F.</p>
-                    <p class="pub-meta mb-0">
-                        <em>Multiple Sclerosis and Related Disorders</em> (2025) 98:106437 &middot; 
-                        <a href="https://doi.org/10.1016/j.msard.2025.106437" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1016/j.msard.2025.106437</a> &middot;
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/40220726/" target="_blank" rel="noopener" class="text-secondary small ms-1">PMID: 40220726</a>
-                    </p>
-                </div>
-
-                <!-- 6. Lopez-Soley E (2025 NeuroImage Clin) -->
-                <div class="publication-card" data-category="cofirst">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> Neuroimaging Lead / RCT</span>
-                        <span class="badge bg-light text-secondary border">2025</span>
-                    </div>
-                    <h4 class="pub-title">Efficacy of cognitive rehabilitation in cognition and brain networks: A randomised clinical trial in patients with multiple sclerosis</h4>
-                    <p class="pub-authors">Lopez-Soley E, <strong>Martinez-Heras E</strong>, Vivo F, Calvi A, Alba-Arbalat S, ..., Solana E, Llufriu S.</p>
-                    <p class="pub-meta mb-0">
-                        <em>NeuroImage: Clinical</em> (2025) 46:103775 &middot; 
-                        <a href="https://doi.org/10.1016/j.nicl.2025.103775" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1016/j.nicl.2025.103775</a> &middot;
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/40184878/" target="_blank" rel="noopener" class="text-secondary small ms-1">PMID: 40184878</a>
-                    </p>
-                </div>
-
-                <!-- 7. Amin M (2024 Curr Neurol Neurosci Rep) -->
-                <div class="publication-card" data-category="chapter">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-flagship"><i class="fa-solid fa-book-open me-1"></i> Review &middot; AI in Multiple Sclerosis</span>
-                        <span class="badge bg-light text-secondary border">2024</span>
-                    </div>
-                    <h4 class="pub-title">Artificial Intelligence and Multiple Sclerosis</h4>
-                    <p class="pub-authors">Amin M, <strong>Martínez-Heras E</strong>, Ontaneda D, Prados Carrasco F.</p>
-                    <p class="pub-meta mb-0">
-                        <em>Current Neurology and Neuroscience Reports</em> (2024) 24(8):233-243 &middot; 
-                        <a href="https://doi.org/10.1007/s11910-024-01354-x" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1007/s11910-024-01354-x</a> &middot;
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/38940994/" target="_blank" rel="noopener" class="text-secondary small ms-1">PMID: 38940994</a>
-                    </p>
-                </div>
-
-                <!-- 8. Vivo F (2024 HBM) -->
-                <div class="publication-card" data-category="senior">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-senior"><i class="fas fa-crown me-1"></i> Senior Author</span>
+                <!-- 4. Vivo F (2024 HBM) -->
+                <div class="publication-card" data-category="senior corresp">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-1">
+                        <div>
+                            <span class="publication-badge badge-senior"><i class="fa-solid fa-crown me-1"></i> Senior Author</span>
+                            <span class="publication-badge badge-corresp"><i class="fa-solid fa-envelope me-1"></i> Corresponding Author</span>
+                        </div>
                         <span class="badge bg-light text-secondary border">2024</span>
                     </div>
                     <h4 class="pub-title">Microscopic fractional anisotropy outperforms multiple sclerosis lesion assessment and clinical outcome associations over standard fractional anisotropy tensor</h4>
-                    <p class="pub-authors">Vivó F, Solana E, Calvi A, Lopez-Soley E, Reid LB, ..., <strong>Martinez-Heras E</strong>.</p>
+                    <p class="pub-authors">Vivó F, Solana E, Calvi A, Lopez-Soley E, Reid LB, ..., Saiz A, Llufriu S, <strong>Martinez-Heras E</strong>&#x2709;.</p>
                     <p class="pub-meta mb-0">
                         <em>Human Brain Mapping</em> (2024) 45(8):e26706 &middot; 
                         <a href="https://doi.org/10.1002/hbm.26706" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1002/hbm.26706</a> &middot;
@@ -557,10 +504,10 @@
                     </p>
                 </div>
 
-                <!-- 9. Martinez-Heras E (2023 JNNP) -->
+                <!-- 5. Martinez-Heras E (2023 JNNP) -->
                 <div class="publication-card" data-category="first">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-first"><i class="fas fa-user-check me-1"></i> First Author</span>
+                        <span class="publication-badge badge-first"><i class="fa-solid fa-user-check me-1"></i> First Author</span>
                         <span class="badge bg-light text-secondary border">2023</span>
                     </div>
                     <h4 class="pub-title">Diffusion-based structural connectivity patterns of multiple sclerosis phenotypes</h4>
@@ -572,14 +519,17 @@
                     </p>
                 </div>
 
-                <!-- 10. Lopez-Soley E (2023 Sci Rep) -->
-                <div class="publication-card" data-category="cofirst">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> Neuroimaging Lead</span>
+                <!-- 6. Lopez-Soley E*, Martinez-Heras E*, Solana E* (2023 Sci Rep) -->
+                <div class="publication-card" data-category="cofirst corresp">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-1">
+                        <div>
+                            <span class="publication-badge badge-cofirst"><i class="fa-solid fa-users me-1"></i> Co-First Author (*)</span>
+                            <span class="publication-badge badge-corresp"><i class="fa-solid fa-envelope me-1"></i> Corresponding Author</span>
+                        </div>
                         <span class="badge bg-light text-secondary border">2023</span>
                     </div>
                     <h4 class="pub-title">Diffusion tensor imaging metrics associated with future disability in multiple sclerosis</h4>
-                    <p class="pub-authors">Lopez-Soley E, <strong>Martinez-Heras E</strong>, Solana E, Solanes A, Radua J, ..., Llufriu S.</p>
+                    <p class="pub-authors">Lopez-Soley E*, <strong>Martinez-Heras E*</strong>&#x2709;, Solana E*, Solanes A, Radua J, ..., Saiz A, Llufriu S.</p>
                     <p class="pub-meta mb-0">
                         <em>Scientific Reports</em> (2023) 13(1):3565 &middot; 
                         <a href="https://doi.org/10.1038/s41598-023-30502-5" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1038/s41598-023-30502-5</a> &middot;
@@ -587,10 +537,10 @@
                     </p>
                 </div>
 
-                <!-- 11. Casas-Roma J (2022 Netw Neurosci) -->
+                <!-- 7. Casas-Roma J* & Martinez-Heras E* (2022 Netw Neurosci) -->
                 <div class="publication-card" data-category="cofirst">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> Co-First Author</span>
+                        <span class="publication-badge badge-cofirst"><i class="fa-solid fa-users me-1"></i> Co-First Author (*)</span>
                         <span class="badge bg-light text-secondary border">2022</span>
                     </div>
                     <h4 class="pub-title">Applying multilayer analysis to morphological, structural, and functional brain networks to identify relevant dysfunction patterns</h4>
@@ -602,59 +552,18 @@
                     </p>
                 </div>
 
-                <!-- 12. Diaz-Hurtado M (2022 Neuroradiology) -->
-                <div class="publication-card" data-category="chapter">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-flagship"><i class="fa-solid fa-book-open me-1"></i> Review &middot; MRI Lesion Segmentation</span>
-                        <span class="badge bg-light text-secondary border">2022</span>
-                    </div>
-                    <h4 class="pub-title">Recent advances in the longitudinal segmentation of multiple sclerosis lesions on magnetic resonance imaging: a review</h4>
-                    <p class="pub-authors">Diaz-Hurtado M, <strong>Martínez-Heras E</strong>, Solana E, Casas-Roma J, Llufriu S, Kanber B, Prados F.</p>
-                    <p class="pub-meta mb-0">
-                        <em>Neuroradiology</em> (2022) 64(11):2103-2117 &middot; 
-                        <a href="https://doi.org/10.1007/s00234-022-03019-3" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1007/s00234-022-03019-3</a> &middot;
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/35864180/" target="_blank" rel="noopener" class="text-secondary small ms-1">PMID: 35864180</a>
-                    </p>
-                </div>
-
-                <!-- 13. Lopez-Soley E (2021 J Pers Med) -->
-                <div class="publication-card" data-category="cofirst">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> Methodological Lead</span>
-                        <span class="badge bg-light text-secondary border">2021</span>
-                    </div>
-                    <h4 class="pub-title">Dynamics and Predictors of Cognitive Impairment along the Disease Course in Multiple Sclerosis</h4>
-                    <p class="pub-authors">Lopez-Soley E, <strong>Martinez-Heras E</strong>, Andorra M, Solanes A, Radua J, ..., Solana E, Llufriu S.</p>
-                    <p class="pub-meta mb-0">
-                        <em>Journal of Personalized Medicine</em> (2021) 11(11):1107 &middot; 
-                        <a href="https://doi.org/10.3390/jpm11111107" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.3390/jpm11111107</a> &middot;
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/34834459/" target="_blank" rel="noopener" class="text-secondary small ms-1">PMID: 34834459</a>
-                    </p>
-                </div>
-
-                <!-- 14. Reid LB (2021 Hum Brain Mapp) -->
-                <div class="publication-card" data-category="cofirst">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> Co-Lead Author</span>
-                        <span class="badge bg-light text-secondary border">2021</span>
-                    </div>
-                    <h4 class="pub-title">Fully automated delineation of the optic radiation for surgical planning using clinically feasible sequences</h4>
-                    <p class="pub-authors">Reid LB, <strong>Martínez-Heras E</strong>, Manjón JV, Jeffree RL, Alexander H, ..., Fripp J.</p>
-                    <p class="pub-meta mb-0">
-                        <em>Human Brain Mapping</em> (2021) 42(18):5911-5926 &middot; 
-                        <a href="https://doi.org/10.1002/hbm.25658" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1002/hbm.25658</a> &middot;
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/34547147/" target="_blank" rel="noopener" class="text-secondary small ms-1">PMID: 34547147</a>
-                    </p>
-                </div>
-
-                <!-- 15. Martinez-Heras E (2021 DWI Review) -->
-                <div class="publication-card" data-category="first chapter">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-first"><i class="fas fa-user-check me-1"></i> First Author &middot; Review</span>
+                <!-- 8. Martinez-Heras E (2021 DWI Review) -->
+                <div class="publication-card" data-category="first chapter corresp">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-1">
+                        <div>
+                            <span class="publication-badge badge-first"><i class="fa-solid fa-user-check me-1"></i> First Author</span>
+                            <span class="publication-badge badge-corresp"><i class="fa-solid fa-envelope me-1"></i> Corresponding Author</span>
+                            <span class="publication-badge badge-flagship"><i class="fa-solid fa-book-open me-1"></i> Review</span>
+                        </div>
                         <span class="badge bg-light text-secondary border">2021</span>
                     </div>
                     <h4 class="pub-title">Diffusion-Weighted Imaging: Recent Advances and Applications</h4>
-                    <p class="pub-authors"><strong>Martinez-Heras E</strong>, Grussu F, Prados F, Solana E, Llufriu S, Thomas DL.</p>
+                    <p class="pub-authors"><strong>Martinez-Heras E</strong>&#x2709;, Grussu F, Prados F, Solana E, Llufriu S, Thomas DL.</p>
                     <p class="pub-meta mb-0">
                         <em>Seminars in Ultrasound, CT and MRI</em> (2021) 42(5):489-506 &middot; 
                         <a href="https://doi.org/10.1053/j.sult.2021.07.006" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1053/j.sult.2021.07.006</a> &middot;
@@ -662,14 +571,17 @@
                     </p>
                 </div>
 
-                <!-- 16. Solana & Martinez-Heras (2021 Sci Rep) -->
-                <div class="publication-card" data-category="cofirst">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> Co-First Author</span>
+                <!-- 9. Solana E*, Martinez-Heras E*, Montal V* (2021 Sci Rep) -->
+                <div class="publication-card" data-category="cofirst corresp">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-1">
+                        <div>
+                            <span class="publication-badge badge-cofirst"><i class="fa-solid fa-users me-1"></i> Co-First Author (*)</span>
+                            <span class="publication-badge badge-corresp"><i class="fa-solid fa-envelope me-1"></i> Corresponding Author</span>
+                        </div>
                         <span class="badge bg-light text-secondary border">2021</span>
                     </div>
                     <h4 class="pub-title">Regional grey matter microstructural changes and volume loss according to disease duration in multiple sclerosis patients</h4>
-                    <p class="pub-authors">Solana E*, <strong>Martinez-Heras E*</strong>, Montal V, Vilaplana E, Lopez-Soley E, ..., Llufriu S.</p>
+                    <p class="pub-authors">Solana E*, <strong>Martinez-Heras E*</strong>&#x2709;, Montal V*, Vilaplana E, Lopez-Soley E, ..., Llufriu S.</p>
                     <p class="pub-meta mb-0">
                         <em>Scientific Reports</em> (2021) 11(1):16822 &middot; 
                         <a href="https://doi.org/10.1038/s41598-021-96132-x" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1038/s41598-021-96132-x</a> &middot;
@@ -677,29 +589,17 @@
                     </p>
                 </div>
 
-                <!-- 17. Hermann I (2021 Magn Reson Med) -->
-                <div class="publication-card" data-category="cofirst">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> MRF & Deep Learning Lead</span>
-                        <span class="badge bg-light text-secondary border">2021</span>
-                    </div>
-                    <h4 class="pub-title">Accelerated white matter lesion analysis based on simultaneous T1 and T2* quantification using magnetic resonance fingerprinting and deep learning</h4>
-                    <p class="pub-authors">Hermann I, <strong>Martínez-Heras E</strong>, Rieger B, Schmidt R, Golla AK, ..., Zöllner FG.</p>
-                    <p class="pub-meta mb-0">
-                        <em>Magnetic Resonance in Medicine</em> (2021) 86(1):471-486 &middot; 
-                        <a href="https://doi.org/10.1002/mrm.28688" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1002/mrm.28688</a> &middot;
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/33547656/" target="_blank" rel="noopener" class="text-secondary small ms-1">PMID: 33547656</a>
-                    </p>
-                </div>
-
-                <!-- 18. Martinez-Heras E (2020 NeuroImage Clin) -->
-                <div class="publication-card" data-category="first">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-first"><i class="fas fa-user-check me-1"></i> First Author</span>
+                <!-- 10. Martinez-Heras E* & Solana E* (2020 NeuroImage Clin) -->
+                <div class="publication-card" data-category="first cofirst">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-1">
+                        <div>
+                            <span class="publication-badge badge-first"><i class="fa-solid fa-user-check me-1"></i> First Author</span>
+                            <span class="publication-badge badge-cofirst"><i class="fa-solid fa-users me-1"></i> Co-First Author (*)</span>
+                        </div>
                         <span class="badge bg-light text-secondary border">2020</span>
                     </div>
                     <h4 class="pub-title">Characterization of multiple sclerosis lesions with distinct clinical correlates through quantitative diffusion MRI</h4>
-                    <p class="pub-authors"><strong>Martínez-Heras E</strong>, Solana E, Prados F, Andorrà M, Solanes A, ..., Llufriu S.</p>
+                    <p class="pub-authors"><strong>Martínez-Heras E*</strong>, Solana E*, Prados F, Andorrà M, Solanes A, ..., Llufriu S.</p>
                     <p class="pub-meta mb-0">
                         <em>NeuroImage: Clinical</em> (2020) 28:102411 &middot; 
                         <a href="https://doi.org/10.1016/j.nicl.2020.102411" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1016/j.nicl.2020.102411</a> &middot;
@@ -707,14 +607,14 @@
                     </p>
                 </div>
 
-                <!-- 19. Solana E (2019 Sci Rep) -->
+                <!-- 11. Solana E* & Martinez-Heras E* (2019 Sci Rep) -->
                 <div class="publication-card" data-category="cofirst">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> Connectomics Lead</span>
+                        <span class="publication-badge badge-cofirst"><i class="fa-solid fa-users me-1"></i> Co-First Author (*)</span>
                         <span class="badge bg-light text-secondary border">2019</span>
                     </div>
                     <h4 class="pub-title">Modified connectivity of vulnerable brain nodes in multiple sclerosis, their impact on cognition and their discriminative value</h4>
-                    <p class="pub-authors">Solana E, <strong>Martinez-Heras E</strong>, Casas-Roma J, Calvet L, Lopez-Soley E, ..., Llufriu S.</p>
+                    <p class="pub-authors">Solana E*, <strong>Martinez-Heras E*</strong>, Casas-Roma J, Calvet L, Lopez-Soley E, ..., Llufriu S.</p>
                     <p class="pub-meta mb-0">
                         <em>Scientific Reports</em> (2019) 9(1):20172 &middot; 
                         <a href="https://doi.org/10.1038/s41598-019-56806-z" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1038/s41598-019-56806-z</a> &middot;
@@ -722,14 +622,14 @@
                     </p>
                 </div>
 
-                <!-- 20. Solana E (2018 NeuroImage Clin) -->
+                <!-- 12. Solana E* & Martinez-Heras E* (2018 NeuroImage Clin) -->
                 <div class="publication-card" data-category="cofirst">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> Neuroimaging Lead</span>
+                        <span class="publication-badge badge-cofirst"><i class="fa-solid fa-users me-1"></i> Co-First Author (*)</span>
                         <span class="badge bg-light text-secondary border">2018</span>
                     </div>
                     <h4 class="pub-title">Magnetic resonance markers of tissue damage related to connectivity disruption in multiple sclerosis</h4>
-                    <p class="pub-authors">Solana E, <strong>Martinez-Heras E</strong>, Martinez-Lapiscina EH, Sepulveda M, ..., Llufriu S.</p>
+                    <p class="pub-authors">Solana E*, <strong>Martinez-Heras E*</strong>, Martinez-Lapiscina EH, Sepulveda M, Sola-Valls N, ..., Llufriu S.</p>
                     <p class="pub-meta mb-0">
                         <em>NeuroImage: Clinical</em> (2018) 20:161-168 &middot; 
                         <a href="https://doi.org/10.1016/j.nicl.2018.07.012" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1016/j.nicl.2018.07.012</a> &middot;
@@ -737,10 +637,10 @@
                     </p>
                 </div>
 
-                <!-- 21. Llufriu & Martinez-Heras (2017 NeuroImage Clin) -->
+                <!-- 13. Llufriu S* & Martinez-Heras E* (2017 NeuroImage Clin) -->
                 <div class="publication-card" data-category="cofirst">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> Co-First Author</span>
+                        <span class="publication-badge badge-cofirst"><i class="fa-solid fa-users me-1"></i> Co-First Author (*)</span>
                         <span class="badge bg-light text-secondary border">2017</span>
                     </div>
                     <h4 class="pub-title">Structural networks involved in attention and executive functions in multiple sclerosis</h4>
@@ -752,10 +652,10 @@
                     </p>
                 </div>
 
-                <!-- 22. Martinez-Heras E (2015 PLoS ONE) -->
+                <!-- 14. Martinez-Heras E (2015 PLoS ONE) -->
                 <div class="publication-card" data-category="first">
                     <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-first"><i class="fas fa-user-check me-1"></i> First Author</span>
+                        <span class="publication-badge badge-first"><i class="fa-solid fa-user-check me-1"></i> First Author</span>
                         <span class="badge bg-light text-secondary border">2015</span>
                     </div>
                     <h4 class="pub-title">Improved Framework for Tractography Reconstruction of the Optic Radiation</h4>
@@ -764,21 +664,6 @@
                         <em>PLoS ONE</em> (2015) 10(9):e0137064 &middot; 
                         <a href="https://doi.org/10.1371/journal.pone.0137064" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1371/journal.pone.0137064</a> &middot;
                         <a href="https://pubmed.ncbi.nlm.nih.gov/26376179/" target="_blank" rel="noopener" class="text-secondary small ms-1">PMID: 26376179</a>
-                    </p>
-                </div>
-
-                <!-- 23. Llufriu S (2014 Mult Scler) -->
-                <div class="publication-card" data-category="cofirst">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <span class="publication-badge badge-cofirst"><i class="fas fa-users me-1"></i> Co-Lead Author</span>
-                        <span class="badge bg-light text-secondary border">2014</span>
-                    </div>
-                    <h4 class="pub-title">Cognitive functions in multiple sclerosis: impact of gray matter integrity</h4>
-                    <p class="pub-authors">Llufriu S, <strong>Martinez-Heras E</strong>, Fortea J, Blanco Y, Berenguer J, ..., Saiz A.</p>
-                    <p class="pub-meta mb-0">
-                        <em>Multiple Sclerosis Journal</em> (2014) 20(4):424-432 &middot; 
-                        <a href="https://doi.org/10.1177/1352458513503722" target="_blank" rel="noopener" class="pub-doi-link">DOI: 10.1177/1352458513503722</a> &middot;
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/24005025/" target="_blank" rel="noopener" class="text-secondary small ms-1">PMID: 24005025</a>
                     </p>
                 </div>
 

@@ -479,6 +479,11 @@ section {
   color: #6b21a8;
 }
 
+.badge-corresp {
+  background-color: #fce7f3;
+  color: #9d174d;
+}
+
 .pub-title {
   font-weight: 700;
   font-size: 1.1rem;
